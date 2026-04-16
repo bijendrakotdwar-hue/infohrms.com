@@ -28,7 +28,7 @@ const AppLandingPage = () => {
           fontSize: 36, marginBottom: 20,
           boxShadow: '0 20px 60px rgba(59,130,246,0.4)'
         }}>Z</div>
-        <h1 style={{fontSize: 32, fontWeight: 900, letterSpacing: -1, marginBottom: 8}}>zenrixi</h1>
+        <h1 style={{fontSize: 32, fontWeight: 900, letterSpacing: -1, marginBottom: 8}}>infohrms</h1>
         <p style={{color: '#93c5fd', fontSize: 14}}>AI-Powered Job Platform</p>
         <div style={{marginTop: 60, display: 'flex', gap: 8}}>
           {[0,1,2].map(i => (
@@ -68,7 +68,7 @@ const AppLandingPage = () => {
           fontSize: 32, margin: '0 auto 16px',
           boxShadow: '0 20px 60px rgba(59,130,246,0.3)'
         }}>Z</div>
-        <h1 style={{fontSize: 28, fontWeight: 900, marginBottom: 6}}>zenrixi</h1>
+        <h1 style={{fontSize: 28, fontWeight: 900, marginBottom: 6}}>infohrms</h1>
         <p style={{color: '#93c5fd', fontSize: 13}}>India's AI-Powered Job Platform</p>
       </div>
 
@@ -166,7 +166,7 @@ const AppLandingPage = () => {
 
       {/* Footer */}
       <div style={{textAlign: 'center', marginTop: 'auto', paddingTop: 40}}>
-        <p style={{color: '#475569', fontSize: 12}}>zenrixi.com • AI-Powered Hiring</p>
+        <p style={{color: '#475569', fontSize: 12}}>infohrms.com • AI-Powered Hiring</p>
       </div>
     </div>
   )

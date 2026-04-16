@@ -290,8 +290,8 @@ const CompanyPortalPage = () => {
 </style></head>
 <body>
   <div class="header">
-    <div class="logo">zenrixi</div>
-    <div>AI-Powered HR Solutions | zenrixi.com</div>
+    <div class="logo">infohrms</div>
+    <div>AI-Powered HR Solutions | infohrms.com</div>
     <div>${company?.company_name}</div>
   </div>
   <div style="text-align:right">Date: ${today}</div>
@@ -422,7 +422,7 @@ const CompanyPortalPage = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
         <header className="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
-          <Link to="/" className="text-xl font-extrabold text-blue-600">zenrixi</Link>
+          <Link to="/" className="text-xl font-extrabold text-blue-600">infohrms</Link>
           <Link to="/company-signup" className="text-sm text-blue-600 font-bold hover:underline">Register Company</Link>
         </header>
         <div className="flex-grow flex items-center justify-center p-6">
@@ -567,7 +567,7 @@ const CompanyPortalPage = () => {
       )}
       {/* Header */}
       <header className="bg-white border-b py-3 px-6 flex items-center justify-between sticky top-0 z-20 shadow-sm">
-        <Link to="/" className="text-lg font-extrabold text-blue-600">zenrixi</Link>
+        <Link to="/" className="text-lg font-extrabold text-blue-600">infohrms</Link>
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">

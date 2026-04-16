@@ -48,9 +48,9 @@ const LaunchPage = () => {
       {/* NAV */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-xl font-black text-blue-600">zenrixi</span>
+          <span className="text-xl font-black text-blue-600">infohrms</span>
           <div className="flex items-center gap-3">
-            <a href="https://www.producthunt.com/posts/zenrixi" target="_blank" rel="noreferrer"
+            <a href="https://www.producthunt.com/posts/infohrms" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors">
               🔥 Vote on Product Hunt
             </a>
@@ -63,7 +63,7 @@ const LaunchPage = () => {
       <section className="pt-32 pb-20 px-4 text-center bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-4xl mx-auto">
           {/* PH Badge */}
-          <a href="https://www.producthunt.com/posts/zenrixi" target="_blank" rel="noreferrer"
+          <a href="https://www.producthunt.com/posts/infohrms" target="_blank" rel="noreferrer"
             className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 border border-orange-200 px-4 py-2 rounded-full text-sm font-bold mb-8 hover:bg-orange-200 transition-colors">
             🏆 Featured on Product Hunt — Vote for us!
           </a>
@@ -74,7 +74,7 @@ const LaunchPage = () => {
           </h1>
 
           <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
-            Zenrixi is India's first AI-powered job matching platform. Upload resume → AI matches jobs. Post job → AI shortlists candidates. Zero manual work.
+            InfoHRMS is India's first AI-powered job matching platform. Upload resume → AI matches jobs. Post job → AI shortlists candidates. Zero manual work.
           </p>
 
           {/* CTA */}
@@ -117,7 +117,7 @@ const LaunchPage = () => {
       {/* HOW IT WORKS */}
       <section className="py-20 px-4">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-black text-center mb-4">How Zenrixi Works</h2>
+          <h2 className="text-4xl font-black text-center mb-4">How InfoHRMS Works</h2>
           <p className="text-gray-500 text-center mb-12">Three portals, one platform, zero manual work</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -215,8 +215,8 @@ const LaunchPage = () => {
 
       {/* FOOTER */}
       <footer className="py-8 px-4 border-t text-center text-gray-400 text-sm">
-        <p className="font-black text-blue-600 text-xl mb-2">zenrixi</p>
-        <p>AI-Powered Hiring Platform • Made in India 🇮🇳 • zenrixi.com</p>
+        <p className="font-black text-blue-600 text-xl mb-2">infohrms</p>
+        <p>AI-Powered Hiring Platform • Made in India 🇮🇳 • infohrms.com</p>
         <div className="flex justify-center gap-6 mt-4">
           <Link to="/" className="hover:text-blue-600">Home</Link>
           <Link to="/jobs" className="hover:text-blue-600">Jobs</Link>

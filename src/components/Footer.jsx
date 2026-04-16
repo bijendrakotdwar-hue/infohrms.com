@@ -7,7 +7,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <div>
-          <Link to="/" className="text-2xl font-extrabold text-blue-600">zenrixi</Link>
+          <Link to="/" className="text-2xl font-extrabold text-blue-600">infohrms</Link>
           <p className="text-sm text-gray-500 mt-3 leading-relaxed">AI-powered recruitment platform. Upload your CV and our AI finds the perfect job for you automatically.</p>
         </div>
         <div>
@@ -34,12 +34,12 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-gray-500">
             <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" /><span>Dehradun, Uttarakhand, India</span></li>
 
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-blue-600 shrink-0" /><a href="mailto:support@zenrixi.com" className="hover:text-blue-600">support@zenrixi.com</a></li>
+            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-blue-600 shrink-0" /><a href="mailto:support@infohrms.com" className="hover:text-blue-600">support@infohrms.com</a></li>
           </ul>
         </div>
       </div>
       <div className="border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-        <p>&copy; {new Date().getFullYear()} zenrixi. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} infohrms. All rights reserved.</p>
         <div className="flex gap-6">
           <Link to="/privacy" className="hover:text-blue-600">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-blue-600">Terms of Service</Link>

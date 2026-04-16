@@ -231,7 +231,7 @@ const CandidatePortalPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b py-3 px-6 flex items-center justify-between sticky top-0 z-10">
-        <Link to="/" className="text-xl font-extrabold text-blue-600">zenrixi</Link>
+        <Link to="/" className="text-xl font-extrabold text-blue-600">infohrms</Link>
         <div className="flex items-center gap-3">
           <span className="text-sm font-bold hidden sm:block">{candidate?.name}</span>
           <button onClick={() => { setIsLoggedIn(false); setCandidate(null); localStorage.removeItem('candidate_session') }} className="p-2 text-gray-500 hover:text-red-500"><LogOut className="w-4 h-4" /></button>

@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md border-b shadow-sm py-3' : 'bg-white/80 backdrop-blur-sm py-4'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-extrabold text-blue-600">zenrixi</Link>
+        <Link to="/" className="text-2xl font-extrabold text-blue-600">infohrms</Link>
         <div className="hidden md:flex items-center gap-6">
           {[['Home','/'],['Jobs','/jobs'],['Companies','/companies']].map(([name,path]) => (
             <Link key={path} to={path} className={`text-sm font-medium transition-colors ${location.pathname===path?'text-blue-600':'text-gray-600 hover:text-gray-900'}`}>{name}</Link>

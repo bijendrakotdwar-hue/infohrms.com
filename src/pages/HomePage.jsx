@@ -112,7 +112,7 @@ const HomePage = () => {
 
       <section className="py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">How Zenrixi Works</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">How InfoHRMS Works</h2>
           <p className="text-gray-500 mb-12">3 simple steps to your dream job</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[

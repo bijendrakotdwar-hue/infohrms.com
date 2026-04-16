@@ -234,7 +234,7 @@ const ConsultantPortalPage = () => {
       setJobForm({ title: '', description: '', skills: '', experience: '0', location: '', salary: '' })
       setActiveModal(null)
       await loadData(consultant.id)
-      alert('Job posted on Zenrixi + LinkedIn!')
+      alert('Job posted on InfoHRMS + LinkedIn!')
     } catch(e) { alert('Failed: ' + e.message) }
     finally { setLoading(false) }
   }
@@ -253,7 +253,7 @@ const ConsultantPortalPage = () => {
       setCandidateForm({ name: '', email: '', phone: '', job_title: '', experience_years: '0', skills: '', location: '' })
       setActiveModal(null)
       await loadData(consultant.id)
-      alert('Candidate added to Zenrixi!')
+      alert('Candidate added to InfoHRMS!')
     } catch(e) { alert('Failed: ' + e.message) }
   }
 
@@ -459,7 +459,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4 shadow-lg">
               <span className="text-white text-3xl font-black">Z</span>
             </div>
-            <h1 className="text-3xl font-black text-gray-900">zenrixi</h1>
+            <h1 className="text-3xl font-black text-gray-900">infohrms</h1>
             <p className="text-gray-500 mt-1">HR Consultant Portal</p>
           </div>
 
@@ -582,7 +582,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
               <span className="text-white font-black text-sm">Z</span>
             </div>
             <div>
-              <span className="font-black text-gray-900">zenrixi</span>
+              <span className="font-black text-gray-900">infohrms</span>
               <span className="text-gray-400 text-xs ml-2">HR Console</span>
             </div>
           </div>
@@ -973,7 +973,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                 </button>
               </div>
               <div className="bg-blue-50 rounded-xl p-3 text-xs text-blue-700 mb-4 flex items-center gap-2">
-                🚀 Jobs posted here appear on Zenrixi Jobs page + LinkedIn auto-post
+                🚀 Jobs posted here appear on InfoHRMS Jobs page + LinkedIn auto-post
               </div>
               {consultantJobs.length === 0 ? (
                 <div className="bg-white rounded-2xl border p-12 text-center">
@@ -1380,7 +1380,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                 </div>
 
                 <div className="bg-blue-50 rounded-xl p-3 text-xs text-blue-700 flex items-center gap-2">
-                  ℹ️ Added to Zenrixi main database. Candidate can login with default password: <strong>Welcome@123</strong>
+                  ℹ️ Added to InfoHRMS main database. Candidate can login with default password: <strong>Welcome@123</strong>
                 </div>
                 <div className="flex gap-3">
                   <button onClick={() => { setCandidateForm({ name:'',email:'',phone:'',job_title:'',experience_years:'0',skills:'',location:'',current_company:'',education:'',summary:'' }); setParsedResume(null) }}
@@ -1405,8 +1405,8 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">MIN EXP (years)</label><input type="number" value={jobForm.experience} onChange={e=>setJobForm({...jobForm,experience:e.target.value})} className={inp()} /></div>
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">LOCATION</label><input value={jobForm.location} onChange={e=>setJobForm({...jobForm,location:e.target.value})} {...stopEnter} placeholder="Delhi / Remote" className={inp()} /></div>
                 </div>
-                <div className="bg-blue-50 rounded-xl p-2 text-xs text-blue-700">🚀 Will post on Zenrixi Jobs + LinkedIn</div>
-                <button onClick={postJob} disabled={loading} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl disabled:opacity-60">{loading?'Posting...':'Post Job on Zenrixi + LinkedIn'}</button>
+                <div className="bg-blue-50 rounded-xl p-2 text-xs text-blue-700">🚀 Will post on InfoHRMS Jobs + LinkedIn</div>
+                <button onClick={postJob} disabled={loading} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl disabled:opacity-60">{loading?'Posting...':'Post Job on InfoHRMS + LinkedIn'}</button>
               </div>
             )}
 

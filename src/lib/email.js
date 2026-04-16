@@ -14,17 +14,17 @@ export const sendEmail = async ({ to, subject, html }) => {
 export const sendWelcomeEmail = async (name, email) => {
   return sendEmail({
     to: email,
-    subject: 'Welcome to Zenrixi — Your AI Job Portal!',
+    subject: 'Welcome to InfoHRMS — Your AI Job Portal!',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #2563eb; padding: 30px; text-align: center;">
-          <h1 style="color: white; margin: 0;">zenrixi</h1>
+          <h1 style="color: white; margin: 0;">infohrms</h1>
         </div>
         <div style="padding: 30px;">
           <h2>Welcome, ${name}!</h2>
           <p>Your account has been created successfully. Our AI will now match you with the best jobs automatically!</p>
-          <a href="https://zenrixi.com/candidate-portal" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">Go to Candidate Portal</a>
-          <p style="color: #666; margin-top: 20px;">If you have any questions, contact us at support@zenrixi.com</p>
+          <a href="https://infohrms.com/candidate-portal" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">Go to Candidate Portal</a>
+          <p style="color: #666; margin-top: 20px;">If you have any questions, contact us at support@infohrms.com</p>
         </div>
       </div>
     `
@@ -34,17 +34,17 @@ export const sendWelcomeEmail = async (name, email) => {
 export const sendCompanyWelcomeEmail = async (companyName, email) => {
   return sendEmail({
     to: email,
-    subject: 'Welcome to Zenrixi — Start Hiring with AI!',
+    subject: 'Welcome to InfoHRMS — Start Hiring with AI!',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #2563eb; padding: 30px; text-align: center;">
-          <h1 style="color: white; margin: 0;">zenrixi</h1>
+          <h1 style="color: white; margin: 0;">infohrms</h1>
         </div>
         <div style="padding: 30px;">
           <h2>Welcome, ${companyName}!</h2>
           <p>Your company has been registered successfully. Post a job and our AI will instantly shortlist the best candidates!</p>
-          <a href="https://zenrixi.com/company-portal" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">Go to Company Portal</a>
-          <p style="color: #666; margin-top: 20px;">If you have any questions, contact us at support@zenrixi.com</p>
+          <a href="https://infohrms.com/company-portal" style="display: inline-block; background: #2563eb; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">Go to Company Portal</a>
+          <p style="color: #666; margin-top: 20px;">If you have any questions, contact us at support@infohrms.com</p>
         </div>
       </div>
     `
@@ -52,14 +52,14 @@ export const sendCompanyWelcomeEmail = async (companyName, email) => {
 }
 
 export const sendPasswordResetEmail = async (name, email, resetToken, userType) => {
-  const resetLink = `https://zenrixi.com/reset-password?token=${resetToken}&type=${userType}`
+  const resetLink = `https://infohrms.com/reset-password?token=${resetToken}&type=${userType}`
   return sendEmail({
     to: email,
-    subject: 'Reset Your Zenrixi Password',
+    subject: 'Reset Your InfoHRMS Password',
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #2563eb; padding: 30px; text-align: center;">
-          <h1 style="color: white; margin: 0;">zenrixi</h1>
+          <h1 style="color: white; margin: 0;">infohrms</h1>
         </div>
         <div style="padding: 30px;">
           <h2>Reset Your Password</h2>

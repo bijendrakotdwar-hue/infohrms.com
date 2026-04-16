@@ -60,7 +60,7 @@ const ResetPasswordPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="w-full max-w-sm bg-white border rounded-2xl p-8 shadow-sm">
-        <Link to="/" className="text-2xl font-extrabold text-blue-600 block mb-6">zenrixi</Link>
+        <Link to="/" className="text-2xl font-extrabold text-blue-600 block mb-6">infohrms</Link>
         {success ? (
           <div className="text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

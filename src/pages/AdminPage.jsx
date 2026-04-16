@@ -336,7 +336,7 @@ const AdminPage = () => {
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center text-white text-3xl font-black mx-auto mb-4">Z</div>
             <h1 className="text-2xl font-black">Admin Panel</h1>
-            <p className="text-gray-500 text-sm mt-1">Zenrixi Owner Access</p>
+            <p className="text-gray-500 text-sm mt-1">InfoHRMS Owner Access</p>
           </div>
           {error && <p className="text-red-600 text-sm mb-4 bg-red-50 p-3 rounded-xl">{error}</p>}
           <div className="space-y-3">
@@ -362,7 +362,7 @@ const AdminPage = () => {
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl">Z</div>
           <div>
-            <div className="font-black text-lg">Zenrixi Admin</div>
+            <div className="font-black text-lg">InfoHRMS Admin</div>
             <div className="text-blue-300 text-xs">Owner Dashboard</div>
           </div>
         </div>
@@ -416,7 +416,7 @@ const AdminPage = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-black">Welcome, Bijendra! 👑</h2>
-                <p className="text-gray-500 text-sm">Complete overview of Zenrixi platform</p>
+                <p className="text-gray-500 text-sm">Complete overview of InfoHRMS platform</p>
               </div>
 
               {/* Stats Grid */}
@@ -868,7 +868,7 @@ const AdminPage = () => {
                       <div>
                         <label className="text-xs font-semibold text-gray-500 block mb-1">Email*</label>
                         <input type="email" value={teamForm.email} onChange={e => setTeamForm({...teamForm, email:e.target.value})}
-                          placeholder="rahul@zenrixi.com"
+                          placeholder="rahul@infohrms.com"
                           className="w-full h-10 border rounded-xl px-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                       </div>
                       <div>
