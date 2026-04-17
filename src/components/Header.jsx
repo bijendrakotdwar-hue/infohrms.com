@@ -22,7 +22,7 @@ const Header = () => {
         <Link to="/" className="text-2xl font-extrabold font-bold" style={{color:"#1a237e"}}>Info<span style={{color:"#f5a623"}}>HRMS</span></Link>
         <div className="hidden md:flex items-center gap-6">
           {[['Home','/'],['Jobs','/jobs'],['Companies','/companies']].map(([name,path]) => (
-            <Link key={path} to={path} className={`text-sm font-medium transition-colors ${location.pathname===path?'style={{color:'#1a237e'}}':'text-gray-600 hover:text-gray-900'}`}>{name}</Link>
+            <Link key={path} to={path} className={`text-sm font-medium transition-colors ${location.pathname===path?'text-[#1a237e] font-semibold':'text-gray-600 hover:text-gray-900'}`}>{name}</Link>
           ))}
           <div className="relative">
             <button onClick={() => setEmpOpen(!empOpen)} className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900">
