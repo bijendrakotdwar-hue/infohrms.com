@@ -45,9 +45,9 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Get your <span className="text-blue-400">dream job</span> using AI
+              Smart <span style={{color:"#f5a623"}}>HR Management</span> Platform
             </h1>
-            <p className="text-xl text-gray-300 mb-10">Upload your CV. Our AI finds the right job for you automatically.</p>
+            <p className="text-xl text-gray-300 mb-10">Streamline your hiring process. Post jobs, manage candidates, and hire the best talent efficiently.</p>
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto mb-6">
               <input value={keyword} onChange={e => setKeyword(e.target.value)}
                 placeholder="Job title, skills, or company..."
@@ -57,7 +57,7 @@ const HomePage = () => {
               </button>
             </form>
             <div className="flex flex-wrap justify-center gap-2">
-              {['React Developer', 'Data Analyst', 'Product Manager', 'DevOps'].map(tag => (
+              {['HR Manager', 'Pharma Executive', 'Quality Analyst', 'Production Manager'].map(tag => (
                 <Link key={tag} to={`/jobs?q=${tag}`} className="text-sm text-gray-300 bg-white/10 hover:bg-white/20 px-4 py-1.5 rounded-full transition-colors">{tag}</Link>
               ))}
             </div>
