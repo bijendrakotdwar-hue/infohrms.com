@@ -334,7 +334,7 @@ const AdminPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-950 to-indigo-900 flex items-center justify-center p-6">
         <div className="bg-white rounded-3xl p-8 w-full max-w-sm shadow-2xl">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl flex items-center justify-center text-white text-3xl font-black mx-auto mb-4">Z</div>
+            <div className="w-16 h-16 bg-gradient-to-br rounded-2xl flex items-center justify-center text-white text-3xl font-black mx-auto mb-4" style={{background:"linear-gradient(135deg,#1a237e,#f5a623)"}}>I</div>
             <h1 className="text-2xl font-black">Admin Panel</h1>
             <p className="text-gray-500 text-sm mt-1">InfoHRMS Owner Access</p>
           </div>
@@ -360,7 +360,7 @@ const AdminPage = () => {
       {/* Header */}
       <header className="bg-gradient-to-r from-gray-900 to-blue-950 text-white px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-xl">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#1a237e] rounded-xl flex items-center justify-center font-black text-xl">Z</div>
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-xl" style={{background:"linear-gradient(135deg,#1a237e,#f5a623)"}}>I</div>
           <div>
             <div className="font-black text-lg">InfoHRMS Admin</div>
             <div className="text-blue-300 text-xs">Owner Dashboard</div>
