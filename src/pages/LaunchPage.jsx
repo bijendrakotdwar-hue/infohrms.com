@@ -48,13 +48,13 @@ const LaunchPage = () => {
       {/* NAV */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b z-50">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-xl font-black text-blue-600">infohrms</span>
+          <span className="text-xl font-black text-[#1a237e]">infohrms</span>
           <div className="flex items-center gap-3">
             <a href="https://www.producthunt.com/posts/infohrms" target="_blank" rel="noreferrer"
               className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition-colors">
               🔥 Vote on Product Hunt
             </a>
-            <Link to="/" className="text-sm text-gray-600 hover:text-blue-600 font-medium">Try Now →</Link>
+            <Link to="/" className="text-sm text-gray-600 hover:text-[#1a237e] font-medium">Try Now →</Link>
           </div>
         </div>
       </nav>
@@ -70,7 +70,7 @@ const LaunchPage = () => {
 
           <h1 className="text-5xl sm:text-7xl font-black text-gray-900 mb-6 leading-tight">
             Hiring is broken.<br/>
-            <span className="text-blue-600">We fixed it with AI.</span>
+            <span className="text-[#1a237e]">We fixed it with AI.</span>
           </h1>
 
           <p className="text-xl text-gray-500 mb-10 max-w-2xl mx-auto">
@@ -80,11 +80,11 @@ const LaunchPage = () => {
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link to="/signup"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors flex items-center justify-center gap-2">
+              className="bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold px-8 py-4 rounded-2xl text-lg transition-colors flex items-center justify-center gap-2">
               Start Free — No Credit Card <ArrowRight className="w-5 h-5" />
             </Link>
             <Link to="/company-signup"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-2xl text-lg transition-colors">
+              className="border-2 border-[#1a237e] text-[#1a237e] hover:bg-[#e8eaf6] font-bold px-8 py-4 rounded-2xl text-lg transition-colors">
               Post Jobs Free
             </Link>
           </div>
@@ -99,7 +99,7 @@ const LaunchPage = () => {
       </section>
 
       {/* STATS */}
-      <section className="py-12 bg-blue-600">
+      <section className="py-12 bg-[#1a237e]">
         <div className="max-w-4xl mx-auto px-4 grid grid-cols-3 gap-8 text-center text-white">
           {[
             ['100%', 'AI Automated'],
@@ -121,7 +121,7 @@ const LaunchPage = () => {
           <p className="text-gray-500 text-center mb-12">Three portals, one platform, zero manual work</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { emoji: '👤', title: 'For Job Seekers', color: 'bg-blue-50 border-blue-100', steps: ['Upload your resume', 'AI analyzes your skills', 'Get matched to perfect jobs', 'Receive interview calls'] },
+              { emoji: '👤', title: 'For Job Seekers', color: 'bg-[#e8eaf6] border-blue-100', steps: ['Upload your resume', 'AI analyzes your skills', 'Get matched to perfect jobs', 'Receive interview calls'] },
               { emoji: '🏢', title: 'For Companies', color: 'bg-green-50 border-green-100', steps: ['Post a job in 2 mins', 'AI reads all resumes', 'Get ranked candidates', 'Schedule interviews instantly'] },
               { emoji: '💼', title: 'For HR Consultants', color: 'bg-purple-50 border-purple-100', steps: ['Manage all clients', 'Track vacancies', 'Generate interview letters', 'Invoice & collect payment'] },
             ].map(({ emoji, title, color, steps }) => (
@@ -131,7 +131,7 @@ const LaunchPage = () => {
                 <ul className="space-y-2">
                   {steps.map((step, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                      <span className="w-5 h-5 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">{i+1}</span>
+                      <span className="w-5 h-5 bg-[#1a237e] text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">{i+1}</span>
                       {step}
                     </li>
                   ))}
@@ -186,7 +186,7 @@ const LaunchPage = () => {
               </div>
             ))}
           </div>
-          <Link to="/signup" className="inline-flex items-center gap-2 bg-white text-blue-700 font-black text-lg px-10 py-4 rounded-2xl hover:bg-blue-50 transition-colors">
+          <Link to="/signup" className="inline-flex items-center gap-2 bg-white text-[#0d1757] font-black text-lg px-10 py-4 rounded-2xl hover:bg-[#e8eaf6] transition-colors">
             Claim Free Access <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -195,14 +195,14 @@ const LaunchPage = () => {
       {/* WAITLIST */}
       <section className="py-20 px-4">
         <div className="max-w-xl mx-auto text-center">
-          <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+          <Globe className="w-12 h-12 text-[#1a237e] mx-auto mb-4" />
           <h2 className="text-3xl font-black mb-3">Stay Updated</h2>
           <p className="text-gray-500 mb-8">Get notified about new features, tips, and updates</p>
           {!submitted ? (
             <form onSubmit={handleSubmit} className="flex gap-3">
               <input type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)}
                 className="flex-1 h-12 border-2 rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <button type="submit" className="bg-blue-600 text-white font-bold px-6 rounded-xl hover:bg-blue-700">Notify Me</button>
+              <button type="submit" className="bg-[#1a237e] text-white font-bold px-6 rounded-xl hover:bg-[#0d1757]">Notify Me</button>
             </form>
           ) : (
             <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
@@ -215,13 +215,13 @@ const LaunchPage = () => {
 
       {/* FOOTER */}
       <footer className="py-8 px-4 border-t text-center text-gray-400 text-sm">
-        <p className="font-black text-blue-600 text-xl mb-2">infohrms</p>
+        <p className="font-black text-[#1a237e] text-xl mb-2">infohrms</p>
         <p>AI-Powered Hiring Platform • Made in India 🇮🇳 • infohrms.com</p>
         <div className="flex justify-center gap-6 mt-4">
-          <Link to="/" className="hover:text-blue-600">Home</Link>
-          <Link to="/jobs" className="hover:text-blue-600">Jobs</Link>
-          <Link to="/signup" className="hover:text-blue-600">Sign Up</Link>
-          <Link to="/company-signup" className="hover:text-blue-600">For Companies</Link>
+          <Link to="/" className="hover:text-[#1a237e]">Home</Link>
+          <Link to="/jobs" className="hover:text-[#1a237e]">Jobs</Link>
+          <Link to="/signup" className="hover:text-[#1a237e]">Sign Up</Link>
+          <Link to="/company-signup" className="hover:text-[#1a237e]">For Companies</Link>
         </div>
       </footer>
     </div>

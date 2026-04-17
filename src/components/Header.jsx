@@ -19,10 +19,10 @@ const Header = () => {
   return (
     <header className={`fixed top-0 z-50 w-full transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md border-b shadow-sm py-3' : 'bg-white/80 backdrop-blur-sm py-4'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-extrabold text-blue-600">infohrms</Link>
+        <Link to="/" className="text-2xl font-extrabold font-bold" style={{color:"#1a237e"}}>Info<span style={{color:"#f5a623"}}>HRMS</span></Link>
         <div className="hidden md:flex items-center gap-6">
           {[['Home','/'],['Jobs','/jobs'],['Companies','/companies']].map(([name,path]) => (
-            <Link key={path} to={path} className={`text-sm font-medium transition-colors ${location.pathname===path?'text-blue-600':'text-gray-600 hover:text-gray-900'}`}>{name}</Link>
+            <Link key={path} to={path} className={`text-sm font-medium transition-colors ${location.pathname===path?'style={{color:'#1a237e'}}':'text-gray-600 hover:text-gray-900'}`}>{name}</Link>
           ))}
           <div className="relative">
             <button onClick={() => setEmpOpen(!empOpen)} className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900">
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
         <div className="hidden md:flex items-center gap-3">
           <div className="relative">
-            <button onClick={() => setLoginOpen(!loginOpen)} className="flex items-center gap-1 px-4 py-2 border border-blue-600 text-blue-600 rounded-lg text-sm font-medium hover:bg-blue-50">
+            <button onClick={() => setLoginOpen(!loginOpen)} className="flex items-center gap-1 px-4 py-2 border-2 rounded-lg text-sm font-medium">
               Login <ChevronDown className="w-3 h-3" />
             </button>
             {loginOpen && (
@@ -51,7 +51,7 @@ const Header = () => {
             )}
           </div>
           <div className="relative">
-            <button onClick={() => setRegOpen(!regOpen)} className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">
+            <button onClick={() => setRegOpen(!regOpen)} className="flex items-center gap-1 px-4 py-2 text-white rounded-lg text-sm font-medium">
               Register <ChevronDown className="w-3 h-3" />
             </button>
             {regOpen && (

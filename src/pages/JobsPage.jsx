@@ -51,7 +51,7 @@ const JobsPage = () => {
                 <option value="3">3+ years</option>
                 <option value="5">5+ years</option>
               </select>
-              <button type="submit" className="h-11 px-6 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm">Search Jobs</button>
+              <button type="submit" className="h-11 px-6 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl text-sm">Search Jobs</button>
             </div>
           </form>
         </div>
@@ -68,8 +68,8 @@ const JobsPage = () => {
               {jobs.map(job => (
                 <div key={job.id} className="bg-white border rounded-2xl p-5 hover:shadow-md transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3 mb-3">
-                    <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                      <Building2 className="w-5 h-5 text-blue-600" />
+                    <div className="w-11 h-11 rounded-xl bg-[#e8eaf6] flex items-center justify-center shrink-0">
+                      <Building2 className="w-5 h-5 text-[#1a237e]" />
                     </div>
                     <div>
                       <h3 className="font-bold line-clamp-1">{job.title}</h3>
@@ -80,14 +80,14 @@ const JobsPage = () => {
                   <p className="text-sm text-gray-500 line-clamp-2 mb-3">{job.description}</p>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {Array.isArray(job.required_skills) && job.required_skills.slice(0, 4).map((s, i) => (
-                      <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2.5 py-0.5 rounded-full">{s}</span>
+                      <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2.5 py-0.5 rounded-full">{s}</span>
                     ))}
                   </div>
                   <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
                     <span className="flex items-center gap-1"><Briefcase className="w-3 h-3" />{job.min_experience ? `${job.min_experience}+ yrs` : 'Any exp'}</span>
                     <span className="flex items-center gap-1"><Clock className="w-3 h-3" />Full Time</span>
                   </div>
-                  <Link to="/signup" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors">Apply Now — Upload Your CV</Link>
+                  <Link to="/signup" className="block w-full text-center bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold py-2.5 rounded-xl text-sm transition-colors">Apply Now — Upload Your CV</Link>
                 </div>
               ))}
             </div>

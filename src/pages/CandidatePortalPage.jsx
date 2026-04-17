@@ -106,8 +106,8 @@ const CandidatePortalPage = () => {
         <Header />
         <div className="flex-grow flex items-center justify-center p-6 pt-24">
           <div className="w-full max-w-sm bg-white border rounded-2xl p-8 shadow-sm">
-            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
-              <User className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 rounded-xl bg-[#e8eaf6] flex items-center justify-center mb-5">
+              <User className="w-6 h-6 text-[#1a237e]" />
             </div>
             {!showForgot ? (
               <>
@@ -163,13 +163,13 @@ const CandidatePortalPage = () => {
                       </button>
                     </div>
                   </div>
-                  <button onClick={() => setShowForgot(true)} className="text-xs text-blue-600 hover:underline w-full text-right">Forgot password?</button>
+                  <button onClick={() => setShowForgot(true)} className="text-xs text-[#1a237e] hover:underline w-full text-right">Forgot password?</button>
                   <button onClick={handleLogin} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                     {loading ? 'Logging in...' : 'Login'}
                   </button>
                 </div>
-                <p className="text-center text-xs text-gray-500 mt-5">Not registered? <Link to="/signup" className="text-blue-600 font-bold hover:underline">Register here</Link></p>
+                <p className="text-center text-xs text-gray-500 mt-5">Not registered? <Link to="/signup" className="text-[#1a237e] font-bold hover:underline">Register here</Link></p>
               </>
             ) : (
               <>
@@ -213,10 +213,10 @@ const CandidatePortalPage = () => {
                     className="w-full h-11 border rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
                   <button onClick={handleForgot} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                     {loading ? 'Updating...' : 'Reset Password'}
                   </button>
-                  <button onClick={() => { setShowForgot(false); setError('') }} className="w-full text-xs text-gray-500 hover:text-blue-600 text-center">Back to Login</button>
+                  <button onClick={() => { setShowForgot(false); setError('') }} className="w-full text-xs text-gray-500 hover:text-[#1a237e] text-center">Back to Login</button>
                 </div>
               </>
             )}
@@ -231,7 +231,7 @@ const CandidatePortalPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-white border-b py-3 px-6 flex items-center justify-between sticky top-0 z-10">
-        <Link to="/" className="text-xl font-extrabold text-blue-600">infohrms</Link>
+        <Link to="/" className="text-xl font-extrabold text-[#1a237e]">infohrms</Link>
         <div className="flex items-center gap-3">
           <span className="text-sm font-bold hidden sm:block">{candidate?.name}</span>
           <button onClick={() => { setIsLoggedIn(false); setCandidate(null); localStorage.removeItem('candidate_session') }} className="p-2 text-gray-500 hover:text-red-500"><LogOut className="w-4 h-4" /></button>
@@ -241,7 +241,7 @@ const CandidatePortalPage = () => {
         <aside className="w-52 bg-white border-r hidden md:flex flex-col p-3 gap-1 sticky top-[57px] h-[calc(100vh-57px)]">
           {[['dashboard','Dashboard',Star],['jobs','Explore Jobs',Search],['matches',`Matches (${shortlisted.length})`,Briefcase],['profile','My Profile',User]].map(([id,label,Icon]) => (
             <button key={id} onClick={() => { setTab(id); if(id==='jobs') loadJobs('') }}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors text-left ${tab===id?'bg-blue-600 text-white':'text-gray-500 hover:bg-gray-100'}`}>
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors text-left ${tab===id?'bg-[#1a237e] text-white':'text-gray-500 hover:bg-gray-100'}`}>
               <Icon className="w-4 h-4 shrink-0" />{label}
             </button>
           ))}
@@ -250,7 +250,7 @@ const CandidatePortalPage = () => {
           <div className="flex gap-2 p-3 bg-white border-b overflow-x-auto">
             {[['dashboard','Dashboard'],['jobs','Jobs'],['matches','Matches'],['profile','Profile']].map(([id,label]) => (
               <button key={id} onClick={() => setTab(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-blue-600 text-white':'bg-gray-100 text-gray-500'}`}>{label}</button>
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-[#1a237e] text-white':'bg-gray-100 text-gray-500'}`}>{label}</button>
             ))}
           </div>
         </div>
@@ -259,7 +259,7 @@ const CandidatePortalPage = () => {
             <div className="space-y-5">
               <h2 className="text-xl font-bold">Welcome, {candidate?.name}!</h2>
               <div className="grid grid-cols-3 gap-3">
-                {[['Jobs Available',jobs.length||'—','text-blue-600'],['AI Matches',matches.length,'text-green-600'],['Shortlisted',shortlisted.length,'text-amber-600']].map(([label,value,color]) => (
+                {[['Jobs Available',jobs.length||'—','text-[#1a237e]'],['AI Matches',matches.length,'text-green-600'],['Shortlisted',shortlisted.length,'text-amber-600']].map(([label,value,color]) => (
                   <div key={label} className="bg-white rounded-2xl border p-4">
                     <p className="text-xs text-gray-500">{label}</p>
                     <p className={`text-2xl font-bold ${color}`}>{value}</p>
@@ -280,7 +280,7 @@ const CandidatePortalPage = () => {
               <div className="flex gap-3 mb-5">
                 <input value={keyword} onChange={e => setKeyword(e.target.value)} placeholder="Search jobs..."
                   className="flex-1 h-10 border rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <button onClick={() => loadJobs(keyword)} className="h-10 px-5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold">Search</button>
+                <button onClick={() => loadJobs(keyword)} className="h-10 px-5 bg-[#1a237e] hover:bg-[#0d1757] text-white rounded-xl text-sm font-bold">Search</button>
               </div>
               {jobs.length===0 ? (
                 <div className="bg-white rounded-2xl border p-12 text-center"><p className="text-gray-500 text-sm">No jobs found.</p></div>
@@ -293,7 +293,7 @@ const CandidatePortalPage = () => {
                       <p className="text-xs text-gray-500 mb-3 line-clamp-2">{job.description}</p>
                       <div className="flex flex-wrap gap-1.5">
                         {Array.isArray(job.required_skills)&&job.required_skills.slice(0,3).map((s,i) => (
-                          <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>
+                          <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>
                         ))}
                       </div>
                     </div>
@@ -318,7 +318,7 @@ const CandidatePortalPage = () => {
                           <p className="text-sm text-gray-500">{match.jobs?.companies?.company_name}</p>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-blue-600">{match.ai_score}%</div>
+                          <div className="text-2xl font-bold text-[#1a237e]">{match.ai_score}%</div>
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${match.status==='shortlist'?'bg-green-100 text-green-700':match.status==='reject'?'bg-red-100 text-red-700':'bg-amber-100 text-amber-700'}`}>
                             {match.status==='shortlist'?'Shortlisted':match.status==='reject'?'Not Selected':'Under Review'}
                           </span>
@@ -336,7 +336,7 @@ const CandidatePortalPage = () => {
               <h2 className="text-xl font-bold mb-5">My Profile</h2>
               <div className="bg-white rounded-2xl border p-6">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl font-bold text-blue-600">
+                  <div className="w-16 h-16 rounded-full bg-[#e8eaf6] flex items-center justify-center text-2xl font-bold text-[#1a237e]">
                     {candidate?.name?.charAt(0)?.toUpperCase()}
                   </div>
                   <div>

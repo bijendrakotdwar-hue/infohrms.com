@@ -360,7 +360,7 @@ const AdminPage = () => {
       {/* Header */}
       <header className="bg-gradient-to-r from-gray-900 to-blue-950 text-white px-6 py-4 flex items-center justify-between sticky top-0 z-20 shadow-xl">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl">Z</div>
+          <div className="w-10 h-10 bg-[#1a237e] rounded-xl flex items-center justify-center font-black text-xl">Z</div>
           <div>
             <div className="font-black text-lg">InfoHRMS Admin</div>
             <div className="text-blue-300 text-xs">Owner Dashboard</div>
@@ -393,7 +393,7 @@ const AdminPage = () => {
             ['users', 'User Management', Users],
           ].map(([id, label, Icon]) => (
             <button key={id} onClick={() => setTab(id)}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-left transition-all ${tab===id?'bg-blue-600 text-white':'text-gray-600 hover:bg-gray-100'}`}>
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-left transition-all ${tab===id?'bg-[#1a237e] text-white':'text-gray-600 hover:bg-gray-100'}`}>
               <Icon className="w-4 h-4 shrink-0" />{label}
             </button>
           ))}
@@ -404,7 +404,7 @@ const AdminPage = () => {
           <div className="flex gap-2 p-3 bg-white border-b overflow-x-auto">
             {[['dashboard','Dashboard'],['candidates','Candidates'],['companies','Companies'],['jobs','Jobs'],['consultants','Consultants'],['invoices','Invoices'],['payments','Payments'],['bulk','Bulk Upload'],['support','Support'],['team','Team'],['users','Users'],['analytics','Analytics']].map(([id,label]) => (
               <button key={id} onClick={() => setTab(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-blue-600 text-white':'bg-gray-100 text-gray-600'}`}>{label}</button>
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-[#1a237e] text-white':'bg-gray-100 text-gray-600'}`}>{label}</button>
             ))}
           </div>
         </div>
@@ -422,7 +422,7 @@ const AdminPage = () => {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
-                  ['Total Candidates', candidates.length, 'bg-blue-500', Users],
+                  ['Total Candidates', candidates.length, 'bg-[#1a237e]', Users],
                   ['Total Companies', companies.length, 'bg-green-500', Building2],
                   ['Active Jobs', jobs.filter(j=>j.status==='active').length, 'bg-purple-500', Briefcase],
                   ['Consultants', consultants.length, 'bg-orange-500', Users],
@@ -447,12 +447,12 @@ const AdminPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="bg-white rounded-2xl border p-5">
                 <BulkUploadCard onCandidatesAdded={() => window.location.reload()} />
-                  <h3 className="font-bold mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-blue-500" /> Recent Candidates</h3>
+                  <h3 className="font-bold mb-4 flex items-center gap-2"><Users className="w-4 h-4 text-[#1a237e]" /> Recent Candidates</h3>
                   <div className="space-y-3">
                     {candidates.slice(0,5).map(c => (
                       <div key={c.id} className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-sm">{c.name?.charAt(0)}</div>
+                          <div className="w-8 h-8 bg-[#e8eaf6] rounded-full flex items-center justify-center text-[#1a237e] font-bold text-sm">{c.name?.charAt(0)}</div>
                           <div>
                             <p className="text-sm font-medium">{c.name}</p>
                             <p className="text-xs text-gray-400">{c.email}</p>
@@ -518,7 +518,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(c); setEditingType('candidate'); setEditForm({...c, password: ''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('candidates', c.id, c.name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200 flex items-center gap-1">
                               <Trash2 className="w-3 h-3" /> Delete
@@ -556,7 +556,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(c); setEditingType('company'); setEditForm({...c, password: ''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('companies', c.id, c.company_name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200 flex items-center gap-1">
                               <Trash2 className="w-3 h-3" /> Delete
@@ -587,7 +587,7 @@ const AdminPage = () => {
                     </div>
                     <div className="flex gap-2">
                       <button onClick={() => toggleJobStatus(j.id, j.status)}
-                        className="text-xs bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-200">
+                        className="text-xs bg-[#e8eaf6] text-[#0d1757] px-3 py-1.5 rounded-lg hover:bg-blue-200">
                         {j.status==='active' ? 'Deactivate' : 'Activate'}
                       </button>
                       <button onClick={() => deleteRecord('jobs', j.id, j.title)}
@@ -624,7 +624,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(c); setEditingType('consultant'); setEditForm({...c, password: ''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('consultants', c.id, c.name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200 flex items-center gap-1">
                               <Trash2 className="w-3 h-3" /> Delete
@@ -772,7 +772,7 @@ const AdminPage = () => {
                   <p className="text-gray-500 text-sm mt-1">Add team members and manage their access rights</p>
                 </div>
                 <button onClick={() => { setShowTeamForm(true); setEditingTeam(null) }}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                  className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   + Add User
                 </button>
               </div>
@@ -781,7 +781,7 @@ const AdminPage = () => {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
                 {[
                   ['👑 Admin', 'Full access to everything', 'bg-purple-50 border-purple-200 text-purple-700'],
-                  ['🎯 Manager', 'View + Edit, no delete', 'bg-blue-50 border-blue-200 text-blue-700'],
+                  ['🎯 Manager', 'View + Edit, no delete', 'bg-[#e8eaf6] border-blue-200 text-[#0d1757]'],
                   ['👤 Staff', 'View only + Support', 'bg-green-50 border-green-200 text-green-700'],
                   ['🎧 Support', 'Support inbox only', 'bg-orange-50 border-orange-200 text-orange-700'],
                 ].map(([role, desc, cls]) => (
@@ -811,7 +811,7 @@ const AdminPage = () => {
                             <h3 className="font-bold">{member.name}</h3>
                             <p className="text-sm text-gray-500">{member.email}</p>
                             <div className="flex items-center gap-2 mt-1">
-                              <span className={`text-xs px-2 py-0.5 rounded-full font-medium \${member.role==='admin'?'bg-purple-100 text-purple-700':member.role==='manager'?'bg-blue-100 text-blue-700':member.role==='support'?'bg-orange-100 text-orange-700':'bg-green-100 text-green-700'}`}>
+                              <span className={`text-xs px-2 py-0.5 rounded-full font-medium \${member.role==='admin'?'bg-purple-100 text-purple-700':member.role==='manager'?'bg-[#e8eaf6] text-[#0d1757]':member.role==='support'?'bg-orange-100 text-orange-700':'bg-green-100 text-green-700'}`}>
                                 {member.role}
                               </span>
                               <span className={`text-xs px-2 py-0.5 rounded-full font-medium \${member.status==='active'?'bg-green-100 text-green-700':'bg-red-100 text-red-700'}`}>
@@ -826,7 +826,7 @@ const AdminPage = () => {
                             {member.status==='active' ? '⏸ Deactivate' : '▶ Activate'}
                           </button>
                           <button onClick={() => { setEditingTeam(member); setTeamForm({...member, password: ''}); setShowTeamForm(true) }}
-                            className="text-xs bg-blue-100 text-blue-600 px-3 py-1.5 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                            className="text-xs bg-[#e8eaf6] text-[#1a237e] px-3 py-1.5 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                           <button onClick={() => deleteRecord('admin_team', member.id, member.name)}
                             className="text-xs bg-red-100 text-red-600 px-3 py-1.5 rounded-lg hover:bg-red-200">🗑</button>
                         </div>
@@ -837,7 +837,7 @@ const AdminPage = () => {
                         <p className="text-xs font-semibold text-gray-500 mb-2">PERMISSIONS</p>
                         <div className="flex flex-wrap gap-1.5">
                           {Object.entries(member.permissions || {}).filter(([k,v]) => v).map(([key]) => (
-                            <span key={key} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">
+                            <span key={key} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">
                               {PERMISSION_LABELS[key] || key}
                             </span>
                           ))}
@@ -909,7 +909,7 @@ const AdminPage = () => {
                               <input type="checkbox" checked={teamForm.permissions[key] || false}
                                 onChange={e => setTeamForm({...teamForm, permissions: {...teamForm.permissions, [key]: e.target.checked}})}
                                 className="sr-only" />
-                              <div className={`w-9 h-5 rounded-full transition-colors \${teamForm.permissions[key] ? 'bg-blue-600' : 'bg-gray-200'}`}>
+                              <div className={`w-9 h-5 rounded-full transition-colors \${teamForm.permissions[key] ? 'bg-[#1a237e]' : 'bg-gray-200'}`}>
                                 <div className={`w-4 h-4 bg-white rounded-full shadow mt-0.5 transition-transform \${teamForm.permissions[key] ? 'translate-x-4 ml-0.5' : 'translate-x-0.5'}`} />
                               </div>
                             </div>
@@ -920,7 +920,7 @@ const AdminPage = () => {
                     </div>
 
                     <button onClick={addTeamMember}
-                      className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl">
+                      className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl">
                       {editingTeam ? '💾 Save Changes' : '➕ Add User'}
                     </button>
                   </div>
@@ -954,7 +954,7 @@ const AdminPage = () => {
                         const hasOpen = sessionChats.some(c => c.status === 'open')
                         return (
                           <div key={sessionId} onClick={() => setSelectedSession(sessionId)}
-                            className={`p-4 border-b cursor-pointer hover:bg-gray-50 transition-colors \${selectedSession === sessionId ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''}`}>
+                            className={`p-4 border-b cursor-pointer hover:bg-gray-50 transition-colors \${selectedSession === sessionId ? 'bg-[#e8eaf6] border-l-4 border-l-blue-500' : ''}`}>
                             <div className="flex items-center justify-between mb-1">
                               <span className="text-xs font-mono text-gray-400">{sessionId.slice(0,15)}...</span>
                               {hasOpen && <span className="w-2 h-2 bg-red-500 rounded-full"></span>}
@@ -1009,14 +1009,14 @@ const AdminPage = () => {
                             <div key={chat.id} className="space-y-2">
                               {/* User message */}
                               <div className="flex justify-end">
-                                <div className="bg-blue-600 text-white text-sm px-4 py-2 rounded-2xl rounded-br-sm max-w-xs">
+                                <div className="bg-[#1a237e] text-white text-sm px-4 py-2 rounded-2xl rounded-br-sm max-w-xs">
                                   {chat.message}
                                 </div>
                               </div>
                               {/* AI Reply */}
                               {chat.reply && (
                                 <div className="flex justify-start gap-2">
-                                  <div className="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center text-sm shrink-0">🤖</div>
+                                  <div className="w-7 h-7 bg-[#e8eaf6] rounded-lg flex items-center justify-center text-sm shrink-0">🤖</div>
                                   <div className="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-2xl rounded-bl-sm max-w-xs">
                                     {chat.reply}
                                   </div>
@@ -1050,7 +1050,7 @@ const AdminPage = () => {
               {/* Tab selector */}
               <div className="flex gap-3 mb-6">
                 <button onClick={() => { setBulkTab('candidate'); setBulkData([]); setBulkResult(null) }}
-                  className={`px-5 py-2 rounded-xl font-bold text-sm \${bulkTab==='candidate'?'bg-blue-600 text-white':'bg-gray-100 text-gray-600'}`}>
+                  className={`px-5 py-2 rounded-xl font-bold text-sm \${bulkTab==='candidate'?'bg-[#1a237e] text-white':'bg-gray-100 text-gray-600'}`}>
                   👤 Candidates
                 </button>
                 <button onClick={() => { setBulkTab('company'); setBulkData([]); setBulkResult(null) }}
@@ -1060,11 +1060,11 @@ const AdminPage = () => {
               </div>
 
               {/* Download template */}
-              <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 mb-5">
+              <div className="bg-[#e8eaf6] border border-blue-100 rounded-2xl p-5 mb-5">
                 <h3 className="font-bold text-blue-800 mb-2">📥 Step 1: Download Template</h3>
-                <p className="text-sm text-blue-600 mb-3">Download the CSV template, fill in the data, and upload below.</p>
+                <p className="text-sm text-[#1a237e] mb-3">Download the CSV template, fill in the data, and upload below.</p>
                 <a href={bulkTab === 'candidate' ? '/candidate_template.csv' : '/company_template.csv'}
-                  download className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-blue-700">
+                  download className="inline-flex items-center gap-2 bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-[#0d1757]">
                   ⬇️ Download {bulkTab === 'candidate' ? 'Candidate' : 'Company'} Template
                 </a>
               </div>
@@ -1074,7 +1074,7 @@ const AdminPage = () => {
                 <h3 className="font-bold mb-2">📤 Step 2: Upload CSV File</h3>
                 <p className="text-sm text-gray-500 mb-4">Select your filled CSV file</p>
                 <input type="file" accept=".csv" onChange={e => handleCSVUpload(e, bulkTab)}
-                  className="block mx-auto text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" />
+                  className="block mx-auto text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-[#e8eaf6] file:text-[#0d1757] hover:file:bg-[#e8eaf6]" />
               </div>
 
               {/* Preview */}
@@ -1105,7 +1105,7 @@ const AdminPage = () => {
 
                   <button onClick={bulkTab === 'candidate' ? uploadBulkCandidates : uploadBulkCompanies}
                     disabled={bulkLoading}
-                    className={`mt-4 w-full h-11 font-bold text-white rounded-xl disabled:opacity-60 \${bulkTab==='candidate'?'bg-blue-600 hover:bg-blue-700':'bg-green-600 hover:bg-green-700'}`}>
+                    className={`mt-4 w-full h-11 font-bold text-white rounded-xl disabled:opacity-60 \${bulkTab==='candidate'?'bg-[#1a237e] hover:bg-[#0d1757]':'bg-green-600 hover:bg-green-700'}`}>
                     {bulkLoading ? '⏳ Uploading...' : `🚀 Upload ${bulkData.length} ${bulkTab === 'candidate' ? 'Candidates' : 'Companies'}`}
                   </button>
                 </div>
@@ -1141,7 +1141,7 @@ const AdminPage = () => {
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-black">👥 User Management</h2>
                 <button onClick={() => { setEditingUser({}); setEditingType('new_user'); setEditForm({ name:'', email:'', phone:'', role:'staff', role_id:'', status:'active', password:'', job_title:'', experience_years:'', permissions:{} }) }}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-700">
+                  className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-[#0d1757]">
                   + Create User
                 </button>
               </div>
@@ -1168,7 +1168,7 @@ const AdminPage = () => {
                         </div>
                         <div className="flex gap-1">
                           <button onClick={() => { setEditingUser(role); setEditingType('edit_role'); setEditForm({...role}) }}
-                            className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg">✏️</button>
+                            className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg">✏️</button>
                           <button onClick={async () => { if(window.confirm('Delete this role?')) { await fetch(`${SUPABASE_URL}/rest/v1/admin_roles?id=eq.${role.id}`, { method:'DELETE', headers:h }); await loadAllData() } }}
                             className="text-xs bg-red-100 text-red-500 px-2 py-1 rounded-lg">🗑️</button>
                         </div>
@@ -1218,7 +1218,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(m); setEditingType('staff'); setEditForm({...m, password:''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('admin_team', m.id, m.name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200">🗑️ Delete</button>
                           </div>
@@ -1251,7 +1251,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(c); setEditingType('candidate'); setEditForm({...c, password:''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('candidates', c.id, c.name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200">🗑️ Delete</button>
                           </div>
@@ -1282,7 +1282,7 @@ const AdminPage = () => {
                         <td className="px-4 py-3">
                           <div className="flex gap-2">
                             <button onClick={() => { setEditingUser(c); setEditingType('company'); setEditForm({...c, password:''}) }}
-                              className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
+                              className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-1 rounded-lg hover:bg-blue-200">✏️ Edit</button>
                             <button onClick={() => deleteRecord('companies', c.id, c.company_name)}
                               className="text-xs bg-red-100 text-red-600 px-2 py-1 rounded-lg hover:bg-red-200">🗑️ Delete</button>
                           </div>
@@ -1461,7 +1461,7 @@ const AdminPage = () => {
                       <button onClick={() => { setEditingUser(null); setEditForm({}) }}
                         className="flex-1 py-2 rounded-xl border text-sm font-semibold text-gray-600 hover:bg-gray-50">Cancel</button>
                       <button onClick={saveEdit}
-                        className="flex-1 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700">
+                        className="flex-1 py-2 rounded-xl bg-[#1a237e] text-white text-sm font-semibold hover:bg-[#0d1757]">
                         💾 {editingType==='new_user'?'Create User':'Save Changes'}
                       </button>
                     </div>
@@ -1527,7 +1527,7 @@ function AnalyticsTab({ supabaseUrl, headers, counts }) {
   const todayVisits = visits.filter(v=>v.visited_at?.startsWith(today)).length
   const weekVisits = visits.filter(v=>v.visited_at > new Date(Date.now()-7*24*60*60*1000).toISOString()).length
 
-  if (loading) return <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>
+  if (loading) return <div className="flex items-center justify-center h-64"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1a237e]"></div></div>
 
   return (
     <div className="space-y-6">
@@ -1535,7 +1535,7 @@ function AnalyticsTab({ supabaseUrl, headers, counts }) {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: "Total Visits", value: visits.length, color: "bg-blue-500" },
+          { label: "Total Visits", value: visits.length, color: "bg-[#1a237e]" },
           { label: "Today Visits", value: todayVisits, color: "bg-green-500" },
           { label: "This Week", value: weekVisits, color: "bg-purple-500" },
           { label: "Countries", value: countryList.length, color: "bg-orange-500" },
@@ -1563,7 +1563,7 @@ function AnalyticsTab({ supabaseUrl, headers, counts }) {
             {registrations.map(r => (
               <tr key={r.label} className="border-t">
                 <td className="px-4 py-3 font-medium">{r.label}</td>
-                <td className="px-4 py-3 text-center font-bold text-blue-600">{r.total}</td>
+                <td className="px-4 py-3 text-center font-bold text-[#1a237e]">{r.total}</td>
                 <td className="px-4 py-3 text-center text-green-600">{r.today}</td>
                 <td className="px-4 py-3 text-center text-purple-600">{r.week}</td>
               </tr>
@@ -1585,7 +1585,7 @@ function AnalyticsTab({ supabaseUrl, headers, counts }) {
                     <span className="text-gray-500">{count}</span>
                   </div>
                   <div className="h-2 bg-gray-100 rounded-full">
-                    <div className="h-2 bg-blue-500 rounded-full" style={{width: `${(count/visits.length*100).toFixed(0)}%`}}></div>
+                    <div className="h-2 bg-[#1a237e] rounded-full" style={{width: `${(count/visits.length*100).toFixed(0)}%`}}></div>
                   </div>
                 </div>
               </div>
@@ -1600,7 +1600,7 @@ function AnalyticsTab({ supabaseUrl, headers, counts }) {
             {pageList.map(([page, count]) => (
               <div key={page} className="flex justify-between items-center border-b pb-2">
                 <span className="text-sm font-medium text-gray-700">{page || '/'}</span>
-                <span className="text-sm font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">{count}</span>
+                <span className="text-sm font-bold text-[#1a237e] bg-[#e8eaf6] px-2 py-0.5 rounded-full">{count}</span>
               </div>
             ))}
           </div>}

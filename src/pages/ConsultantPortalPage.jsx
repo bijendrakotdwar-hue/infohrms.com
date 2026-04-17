@@ -456,7 +456,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
         <div className="w-full max-w-md">
           {/* Logo */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4 shadow-lg">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a237e] rounded-2xl mb-4 shadow-lg">
               <span className="text-white text-3xl font-black">Z</span>
             </div>
             <h1 className="text-3xl font-black text-gray-900">infohrms</h1>
@@ -476,11 +476,11 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   onChange={e => setOtpInput(e.target.value.replace(/\D/g,''))}
                   className="w-full h-14 border-2 rounded-2xl px-4 text-center text-2xl font-bold tracking-widest focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3" />
                 <button onClick={verifyOTPAndRegister} disabled={loading}
-                  className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl disabled:opacity-60 mb-2">
+                  className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl disabled:opacity-60 mb-2">
                   {loading ? 'Verifying...' : 'Verify & Create Account'}
                 </button>
                 <button onClick={() => { setOtpSent(false); setOtpInput(''); setError('') }}
-                  className="w-full text-sm text-gray-500 hover:text-blue-600 text-center">← Back</button>
+                  className="w-full text-sm text-gray-500 hover:text-[#1a237e] text-center">← Back</button>
               </>
             ) : !isRegister ? (
               <>
@@ -506,11 +506,11 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     </div>
                   </div>
                   <button onClick={handleLogin} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl disabled:opacity-60">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl disabled:opacity-60">
                     {loading ? 'Logging in...' : 'Login →'}
                   </button>
                 </div>
-                <p className="text-center text-sm text-gray-500 mt-6">New consultant? <button onClick={() => { setIsRegister(true); setError('') }} className="text-blue-600 font-bold">Register here</button></p>
+                <p className="text-center text-sm text-gray-500 mt-6">New consultant? <button onClick={() => { setIsRegister(true); setError('') }} className="text-[#1a237e] font-bold">Register here</button></p>
               </>
             ) : (
               <>
@@ -544,11 +544,11 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     </div>
                   </div>
                   <button onClick={handleRegister} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl disabled:opacity-60">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl disabled:opacity-60">
                     {loading ? 'Sending OTP...' : 'Send OTP →'}
                   </button>
                 </div>
-                <p className="text-center text-sm text-gray-500 mt-4">Already registered? <button onClick={() => { setIsRegister(false); setError('') }} className="text-blue-600 font-bold">Login</button></p>
+                <p className="text-center text-sm text-gray-500 mt-4">Already registered? <button onClick={() => { setIsRegister(false); setError('') }} className="text-[#1a237e] font-bold">Login</button></p>
               </>
             )}
           </div>
@@ -578,7 +578,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
       <header className="bg-white border-b sticky top-0 z-20 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#1a237e] rounded-lg flex items-center justify-center">
               <span className="text-white font-black text-sm">Z</span>
             </div>
             <div>
@@ -605,7 +605,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
           <div className="p-3 space-y-0.5">
             {navItems.map(({ id, label, icon: Icon }) => (
               <button key={id} onClick={() => setTab(id)}
-                className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm transition-all text-left ${tab===id?'bg-blue-600 text-white font-medium':'text-gray-600 hover:bg-gray-50'}`}>
+                className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm transition-all text-left ${tab===id?'bg-[#1a237e] text-white font-medium':'text-gray-600 hover:bg-gray-50'}`}>
                 <Icon className="w-4 h-4 shrink-0" />
                 <span className="truncate">{label}</span>
               </button>
@@ -618,7 +618,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
           <div className="flex gap-1.5 p-2 overflow-x-auto">
             {navItems.map(({ id, label }) => (
               <button key={id} onClick={() => setTab(id)}
-                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-blue-600 text-white':'bg-gray-100 text-gray-600'}`}>
+                className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-[#1a237e] text-white':'bg-gray-100 text-gray-600'}`}>
                 {label.split(' ')[0]}
               </button>
             ))}
@@ -643,7 +643,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                 {[
                   { label: 'Total Revenue', value: `₹${totalRevenue.toLocaleString('en-IN')}`, icon: DollarSign, color: 'bg-green-500', tab: 'payments' },
                   { label: 'Pending Amount', value: `₹${pendingInvoices.reduce((s,i)=>s+(parseFloat(i.total)||0),0).toLocaleString('en-IN')}`, icon: Bell, color: 'bg-red-500', tab: 'invoices' },
-                  { label: 'Placements', value: placements.length, icon: TrendingUp, color: 'bg-blue-500', tab: 'placements' },
+                  { label: 'Placements', value: placements.length, icon: TrendingUp, color: 'bg-[#1a237e]', tab: 'placements' },
                   { label: 'Follow-ups Due', value: pendingFollowups.length, icon: Clock, color: 'bg-orange-500', tab: 'followups' },
                 ].map(stat => (
                   <div key={stat.label} onClick={() => setTab(stat.tab)}
@@ -664,7 +664,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                 <h3 className="font-bold text-gray-700 mb-3 text-sm">QUICK ACTIONS</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {[
-                    { label: 'Add Partner', icon: '🏢', action: () => setActiveModal('partner'), color: 'bg-blue-50 text-blue-700 hover:bg-blue-100' },
+                    { label: 'Add Partner', icon: '🏢', action: () => setActiveModal('partner'), color: 'bg-[#e8eaf6] text-[#0d1757] hover:bg-[#e8eaf6]' },
                     { label: 'Post Job', icon: '💼', action: () => setActiveModal('job'), color: 'bg-purple-50 text-purple-700 hover:bg-purple-100' },
                     { label: 'Interview Letter', icon: '📋', action: () => setActiveModal('letter'), color: 'bg-orange-50 text-orange-700 hover:bg-orange-100' },
                     { label: 'Create Invoice', icon: '🧾', action: () => setActiveModal('invoice'), color: 'bg-green-50 text-green-700 hover:bg-green-100' },
@@ -710,7 +710,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Partner Master</h2>
-                <button onClick={() => setActiveModal('partner')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('partner')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Add Partner
                 </button>
               </div>
@@ -725,7 +725,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     <div key={p.id} className="bg-white rounded-2xl border p-5 hover:shadow-md transition-shadow">
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center font-black text-blue-700 text-xl">{p.company_name?.charAt(0)}</div>
+                          <div className="w-12 h-12 bg-[#e8eaf6] rounded-xl flex items-center justify-center font-black text-[#0d1757] text-xl">{p.company_name?.charAt(0)}</div>
                           <div>
                             <h3 className="font-bold text-gray-900">{p.company_name}</h3>
                             <p className="text-xs text-gray-500">{p.industry}</p>
@@ -740,7 +740,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                       </div>
                       <div className="flex gap-2">
                         <button onClick={() => { setSelectedPartner(p); setTab('contacts') }}
-                          className="flex-1 text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-100 font-medium">
+                          className="flex-1 text-xs bg-[#e8eaf6] text-[#0d1757] px-3 py-1.5 rounded-lg hover:bg-[#e8eaf6] font-medium">
                           View Contacts ({contacts.filter(c=>c.partner_id===p.id).length})
                         </button>
                         <button onClick={() => deleteRecord('consultant_partners', p.id)}
@@ -761,9 +761,9 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
               <div className="flex items-center justify-between mb-5">
                 <div>
                   <h2 className="text-xl font-black">Contact Master</h2>
-                  {selectedPartner && <p className="text-sm text-blue-600 mt-0.5">Filtered: {selectedPartner.company_name} <button onClick={() => setSelectedPartner(null)} className="text-gray-400 ml-1">×</button></p>}
+                  {selectedPartner && <p className="text-sm text-[#1a237e] mt-0.5">Filtered: {selectedPartner.company_name} <button onClick={() => setSelectedPartner(null)} className="text-gray-400 ml-1">×</button></p>}
                 </div>
-                <button onClick={() => setActiveModal('contact')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('contact')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Add Contact
                 </button>
               </div>
@@ -784,19 +784,19 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                             <div>
                               <h3 className="font-bold text-gray-900">{c.name}</h3>
                               <p className="text-xs text-gray-500">{c.designation}</p>
-                              {c.is_primary && <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full">Primary</span>}
+                              {c.is_primary && <span className="text-xs bg-[#e8eaf6] text-[#0d1757] px-1.5 py-0.5 rounded-full">Primary</span>}
                             </div>
                           </div>
                           <button onClick={() => deleteRecord('consultant_contacts', c.id)} className="text-red-400 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
                         </div>
-                        {partner && <p className="text-xs text-blue-600 mb-2 font-medium">🏢 {partner.company_name}</p>}
+                        {partner && <p className="text-xs text-[#1a237e] mb-2 font-medium">🏢 {partner.company_name}</p>}
                         <div className="space-y-1 text-xs text-gray-500">
                           {c.email && <p className="flex items-center gap-1"><Mail className="w-3 h-3" />{c.email}</p>}
                           {c.phone && <p className="flex items-center gap-1"><Phone className="w-3 h-3" />{c.phone}</p>}
                           {c.department && <p>Dept: {c.department}</p>}
                         </div>
                         <div className="flex gap-2 mt-3">
-                          {c.email && <a href={`mailto:${c.email}`} className="flex-1 text-xs bg-blue-50 text-blue-700 px-2 py-1.5 rounded-lg text-center hover:bg-blue-100">Email</a>}
+                          {c.email && <a href={`mailto:${c.email}`} className="flex-1 text-xs bg-[#e8eaf6] text-[#0d1757] px-2 py-1.5 rounded-lg text-center hover:bg-[#e8eaf6]">Email</a>}
                           {c.phone && <a href={`tel:${c.phone}`} className="flex-1 text-xs bg-green-50 text-green-700 px-2 py-1.5 rounded-lg text-center hover:bg-green-100">Call</a>}
                           {c.whatsapp && <a href={`https://wa.me/${c.whatsapp}`} target="_blank" rel="noreferrer" className="flex-1 text-xs bg-emerald-50 text-emerald-700 px-2 py-1.5 rounded-lg text-center hover:bg-emerald-100">WhatsApp</a>}
                         </div>
@@ -819,7 +819,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     {bulkUploading ? `⏳ ${bulkProgress.done}/${bulkProgress.total}` : 'Bulk Upload Resumes'}
                     <input type="file" multiple accept=".txt,.pdf,.doc,.docx" className="hidden" onChange={handleResumeUpload} disabled={bulkUploading} />
                   </label>
-                  <button onClick={() => setActiveModal('candidate')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                  <button onClick={() => setActiveModal('candidate')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                     <Plus className="w-4 h-4" /> Add
                   </button>
                 </div>
@@ -861,7 +861,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     { id: 'shortlisted', label: `✅ Shortlisted (${Object.values(candidateStatuses).filter(s=>s.status==='shortlisted').length})`, color: 'bg-green-600' },
                     { id: 'hold', label: `⏸ On Hold (${Object.values(candidateStatuses).filter(s=>s.status==='hold').length})`, color: 'bg-orange-500' },
                     { id: 'rejected', label: `❌ Rejected (${Object.values(candidateStatuses).filter(s=>s.status==='rejected').length})`, color: 'bg-red-500' },
-                    { id: 'mine', label: `👤 Added by Me (${candidates.length})`, color: 'bg-blue-600' },
+                    { id: 'mine', label: `👤 Added by Me (${candidates.length})`, color: 'bg-[#1a237e]' },
                   ].map(f => (
                     <button key={f.id} onClick={() => setCandidateFilter(f.id)}
                       className={`text-xs px-3 py-1.5 rounded-full font-medium transition-all ${candidateFilter===f.id?`${f.color} text-white`:'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}>
@@ -925,7 +925,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                                 <option value="rejected">❌ Rejected</option>
                               </select>
                               {c.added_by_consultant === consultant?.id && (
-                                <span className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">Added by me</span>
+                                <span className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">Added by me</span>
                               )}
                             </div>
                           </div>
@@ -933,7 +933,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                           {/* Skills */}
                           {Array.isArray(c.parsed_skills) && c.parsed_skills.length > 0 && (
                             <div className="flex flex-wrap gap-1.5 mb-3">
-                              {c.parsed_skills.slice(0,6).map((s,i) => <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>)}
+                              {c.parsed_skills.slice(0,6).map((s,i) => <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>)}
                               {c.parsed_skills.length > 6 && <span className="text-xs text-gray-400">+{c.parsed_skills.length-6} more</span>}
                             </div>
                           )}
@@ -944,7 +944,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                               className="text-xs bg-orange-50 text-orange-700 px-3 py-1.5 rounded-lg hover:bg-orange-100 flex items-center gap-1">
                               📋 Interview Letter
                             </button>
-                            {c.email && <a href={`mailto:${c.email}`} className="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-100">✉️ Email</a>}
+                            {c.email && <a href={`mailto:${c.email}`} className="text-xs bg-[#e8eaf6] text-[#0d1757] px-3 py-1.5 rounded-lg hover:bg-[#e8eaf6]">✉️ Email</a>}
                             {c.phone && <a href={`tel:${c.phone}`} className="text-xs bg-green-50 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-100">📞 Call</a>}
                             {c.phone && <a href={`https://wa.me/${c.phone}`} target="_blank" rel="noreferrer" className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-lg hover:bg-emerald-100">💬 WhatsApp</a>}
                             {c.resume_url && (
@@ -968,11 +968,11 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Job Posts ({consultantJobs.length})</h2>
-                <button onClick={() => setActiveModal('job')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('job')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Post Job
                 </button>
               </div>
-              <div className="bg-blue-50 rounded-xl p-3 text-xs text-blue-700 mb-4 flex items-center gap-2">
+              <div className="bg-[#e8eaf6] rounded-xl p-3 text-xs text-[#0d1757] mb-4 flex items-center gap-2">
                 🚀 Jobs posted here appear on InfoHRMS Jobs page + LinkedIn auto-post
               </div>
               {consultantJobs.length === 0 ? (
@@ -992,7 +992,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                         <span className={`text-xs px-2 py-0.5 rounded-full ${j.status==='active'?'bg-green-100 text-green-700':'bg-gray-100 text-gray-600'}`}>{j.status}</span>
                       </div>
                       <div className="flex flex-wrap gap-1.5 mt-2">
-                        {Array.isArray(j.required_skills) && j.required_skills.map((s,i) => <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>)}
+                        {Array.isArray(j.required_skills) && j.required_skills.map((s,i) => <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>)}
                       </div>
                     </div>
                   ))}
@@ -1006,7 +1006,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Vacancy Tracker ({vacancies.length})</h2>
-                <button onClick={() => setActiveModal('vacancy')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('vacancy')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Add Vacancy
                 </button>
               </div>
@@ -1024,7 +1024,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                         <div className="flex items-start justify-between mb-2">
                           <div>
                             <h3 className="font-bold">{v.title}</h3>
-                            <p className="text-xs text-blue-600 font-medium">{partner?.company_name}</p>
+                            <p className="text-xs text-[#1a237e] font-medium">{partner?.company_name}</p>
                             <p className="text-xs text-gray-500">{v.location} • {v.salary_range} • {v.vacancy_count} position(s)</p>
                           </div>
                           <div className="flex items-center gap-2">
@@ -1034,7 +1034,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                         </div>
                         {Array.isArray(v.required_skills) && v.required_skills.length > 0 && (
                           <div className="flex flex-wrap gap-1.5 mt-2">
-                            {v.required_skills.map((s,i) => <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>)}
+                            {v.required_skills.map((s,i) => <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>)}
                           </div>
                         )}
                         <div className="flex gap-2 mt-3">
@@ -1074,7 +1074,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                         <div>
                           <h3 className="font-bold">{il.candidate_name}</h3>
                           <p className="text-sm text-gray-500">{il.position}</p>
-                          <p className="text-xs text-blue-600">{partner?.company_name}</p>
+                          <p className="text-xs text-[#1a237e]">{partner?.company_name}</p>
                           <p className="text-xs text-gray-400">{il.interview_date ? new Date(il.interview_date).toLocaleDateString('en-IN') : ''} • {il.interview_type}</p>
                         </div>
                         <button onClick={() => deleteRecord('interview_letters', il.id)} className="text-red-400 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
@@ -1091,7 +1091,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Placements ({placements.length})</h2>
-                <button onClick={() => setActiveModal('placement')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('placement')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Add Placement
                 </button>
               </div>
@@ -1110,7 +1110,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                           <div>
                             <h3 className="font-bold">{p.candidate_name}</h3>
                             <p className="text-sm text-gray-500">{p.position}</p>
-                            <p className="text-xs text-blue-600">{partner?.company_name}</p>
+                            <p className="text-xs text-[#1a237e]">{partner?.company_name}</p>
                             {p.joining_date && <p className="text-xs text-gray-400">Joining: {new Date(p.joining_date).toLocaleDateString('en-IN')}</p>}
                           </div>
                           <div className="text-right">
@@ -1132,7 +1132,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Invoices ({invoices.length})</h2>
-                <button onClick={() => setActiveModal('invoice')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('invoice')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Create Invoice
                 </button>
               </div>
@@ -1159,7 +1159,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                           </div>
                         </div>
                         <div className="flex gap-2 mt-3">
-                          <button onClick={() => generateInvoicePDF(inv)} className="text-xs bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-100 flex items-center gap-1">
+                          <button onClick={() => generateInvoicePDF(inv)} className="text-xs bg-[#e8eaf6] text-[#0d1757] px-3 py-1.5 rounded-lg hover:bg-[#e8eaf6] flex items-center gap-1">
                             <Download className="w-3 h-3" /> Download
                           </button>
                           {inv.status==='unpaid' && (
@@ -1183,7 +1183,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             <div>
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-xl font-black">Payments ({payments.length})</h2>
-                <button onClick={() => setActiveModal('payment')} className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-700">
+                <button onClick={() => setActiveModal('payment')} className="bg-[#1a237e] text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-[#0d1757]">
                   <Plus className="w-4 h-4" /> Record Payment
                 </button>
               </div>
@@ -1250,7 +1250,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                               <span className="text-lg">{f.type==='call'?'📞':f.type==='email'?'✉️':f.type==='meeting'?'🤝':'📋'}</span>
                               <h3 className="font-bold">{f.subject}</h3>
                             </div>
-                            {partner && <p className="text-xs text-blue-600">{partner.company_name}</p>}
+                            {partner && <p className="text-xs text-[#1a237e]">{partner.company_name}</p>}
                             {f.notes && <p className="text-xs text-gray-500 mt-1">{f.notes}</p>}
                           </div>
                           <div className="text-right flex flex-col items-end gap-1">
@@ -1298,7 +1298,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   <div className="col-span-2"><label className="text-xs font-semibold text-gray-500 block mb-1">ADDRESS</label><textarea value={partnerForm.address} onChange={e=>setPartnerForm({...partnerForm,address:e.target.value})} rows={2} placeholder="Full address..." className="w-full border rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" /></div>
                   <div className="col-span-2"><label className="text-xs font-semibold text-gray-500 block mb-1">NOTES</label><textarea value={partnerForm.notes} onChange={e=>setPartnerForm({...partnerForm,notes:e.target.value})} rows={2} placeholder="Any notes..." className="w-full border rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" /></div>
                 </div>
-                <button onClick={async()=>{if(!partnerForm.company_name){alert('Company name required');return};await saveRecord('consultant_partners',partnerForm,'consultant_id');setPartnerForm({company_name:'',industry:'',website:'',address:'',city:'',state:'',gst_number:'',pan_number:'',notes:''});setActiveModal(null)}} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl">Add Partner</button>
+                <button onClick={async()=>{if(!partnerForm.company_name){alert('Company name required');return};await saveRecord('consultant_partners',partnerForm,'consultant_id');setPartnerForm({company_name:'',industry:'',website:'',address:'',city:'',state:'',gst_number:'',pan_number:'',notes:''});setActiveModal(null)}} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl">Add Partner</button>
               </div>
             )}
 
@@ -1315,7 +1315,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">DEPARTMENT</label><input value={contactForm.department} onChange={e=>setContactForm({...contactForm,department:e.target.value})} {...stopEnter} placeholder="Human Resources" className={inp()} /></div>
                   <div className="col-span-2"><label className="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked={contactForm.is_primary} onChange={e=>setContactForm({...contactForm,is_primary:e.target.checked})} /><span className="text-sm">Mark as Primary Contact</span></label></div>
                 </div>
-                <button onClick={async()=>{if(!contactForm.name){alert('Name required');return};await saveRecord('consultant_contacts',contactForm,'consultant_id');setContactForm({partner_id:'',name:'',designation:'',email:'',phone:'',whatsapp:'',department:'',is_primary:false,notes:''});setActiveModal(null)}} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl">Add Contact</button>
+                <button onClick={async()=>{if(!contactForm.name){alert('Name required');return};await saveRecord('consultant_contacts',contactForm,'consultant_id');setContactForm({partner_id:'',name:'',designation:'',email:'',phone:'',whatsapp:'',department:'',is_primary:false,notes:''});setActiveModal(null)}} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl">Add Contact</button>
               </div>
             )}
 
@@ -1323,16 +1323,16 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
             {activeModal==='candidate' && (
               <div className="space-y-3">
                 {/* Resume Upload for AI Parse */}
-                <div className="border-2 border-dashed border-blue-200 rounded-xl p-4 text-center bg-blue-50">
+                <div className="border-2 border-dashed border-blue-200 rounded-xl p-4 text-center bg-[#e8eaf6]">
                   <div className="text-2xl mb-1">🤖</div>
-                  <p className="text-sm font-bold text-blue-700 mb-1">Upload Resume — AI Auto Fill</p>
-                  <p className="text-xs text-blue-500 mb-2">AI will read resume and fill form automatically</p>
-                  <label className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-xl text-xs font-bold cursor-pointer hover:bg-blue-700">
+                  <p className="text-sm font-bold text-[#0d1757] mb-1">Upload Resume — AI Auto Fill</p>
+                  <p className="text-xs text-[#1a237e] mb-2">AI will read resume and fill form automatically</p>
+                  <label className="inline-flex items-center gap-2 bg-[#1a237e] text-white px-4 py-2 rounded-xl text-xs font-bold cursor-pointer hover:bg-[#0d1757]">
                     <Upload className="w-3 h-3" />
                     {aiParsing ? 'AI Reading Resume...' : parsedResume ? `✅ ${parsedResume}` : 'Upload Resume (PDF/TXT)'}
                     <input type="file" accept=".txt,.pdf,.doc" className="hidden" onChange={e => e.target.files[0] && parseSingleResume(e.target.files[0])} />
                   </label>
-                  {aiParsing && <p className="text-xs text-blue-500 mt-2 animate-pulse">🤖 AI is reading and extracting information...</p>}
+                  {aiParsing && <p className="text-xs text-[#1a237e] mt-2 animate-pulse">🤖 AI is reading and extracting information...</p>}
                 </div>
 
                 {/* Form Fields */}
@@ -1379,7 +1379,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   </div>
                 </div>
 
-                <div className="bg-blue-50 rounded-xl p-3 text-xs text-blue-700 flex items-center gap-2">
+                <div className="bg-[#e8eaf6] rounded-xl p-3 text-xs text-[#0d1757] flex items-center gap-2">
                   ℹ️ Added to InfoHRMS main database. Candidate can login with default password: <strong>Welcome@123</strong>
                 </div>
                 <div className="flex gap-3">
@@ -1388,7 +1388,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                     Clear Form
                   </button>
                   <button onClick={addCandidate} disabled={aiParsing}
-                    className="flex-1 h-11 bg-blue-600 text-white font-bold rounded-xl disabled:opacity-60">
+                    className="flex-1 h-11 bg-[#1a237e] text-white font-bold rounded-xl disabled:opacity-60">
                     {aiParsing ? '⏳ Processing...' : 'Add to Database'}
                   </button>
                 </div>
@@ -1405,8 +1405,8 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">MIN EXP (years)</label><input type="number" value={jobForm.experience} onChange={e=>setJobForm({...jobForm,experience:e.target.value})} className={inp()} /></div>
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">LOCATION</label><input value={jobForm.location} onChange={e=>setJobForm({...jobForm,location:e.target.value})} {...stopEnter} placeholder="Delhi / Remote" className={inp()} /></div>
                 </div>
-                <div className="bg-blue-50 rounded-xl p-2 text-xs text-blue-700">🚀 Will post on InfoHRMS Jobs + LinkedIn</div>
-                <button onClick={postJob} disabled={loading} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl disabled:opacity-60">{loading?'Posting...':'Post Job on InfoHRMS + LinkedIn'}</button>
+                <div className="bg-[#e8eaf6] rounded-xl p-2 text-xs text-[#0d1757]">🚀 Will post on InfoHRMS Jobs + LinkedIn</div>
+                <button onClick={postJob} disabled={loading} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl disabled:opacity-60">{loading?'Posting...':'Post Job on InfoHRMS + LinkedIn'}</button>
               </div>
             )}
 
@@ -1424,7 +1424,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">MIN EXP</label><input type="number" value={vacancyForm.min_experience} onChange={e=>setVacancyForm({...vacancyForm,min_experience:e.target.value})} className={inp()} /></div>
                   <div><label className="text-xs font-semibold text-gray-500 block mb-1">TARGET DATE</label><input type="date" value={vacancyForm.target_date} onChange={e=>setVacancyForm({...vacancyForm,target_date:e.target.value})} className={inp()} /></div>
                 </div>
-                <button onClick={async()=>{if(!vacancyForm.title||!vacancyForm.partner_id){alert('Partner and title required');return};const skills=vacancyForm.required_skills.split(',').map(s=>s.trim()).filter(Boolean);await saveRecord('consultant_vacancies',{...vacancyForm,required_skills:skills,min_experience:parseInt(vacancyForm.min_experience)||0,vacancy_count:parseInt(vacancyForm.vacancy_count)||1},'consultant_id');setVacancyForm({partner_id:'',title:'',description:'',required_skills:'',min_experience:'0',location:'',salary_range:'',vacancy_count:'1',priority:'medium',target_date:'',notes:''});setActiveModal(null)}} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl">Add Vacancy</button>
+                <button onClick={async()=>{if(!vacancyForm.title||!vacancyForm.partner_id){alert('Partner and title required');return};const skills=vacancyForm.required_skills.split(',').map(s=>s.trim()).filter(Boolean);await saveRecord('consultant_vacancies',{...vacancyForm,required_skills:skills,min_experience:parseInt(vacancyForm.min_experience)||0,vacancy_count:parseInt(vacancyForm.vacancy_count)||1},'consultant_id');setVacancyForm({partner_id:'',title:'',description:'',required_skills:'',min_experience:'0',location:'',salary_range:'',vacancy_count:'1',priority:'medium',target_date:'',notes:''});setActiveModal(null)}} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl">Add Vacancy</button>
               </div>
             )}
 
@@ -1461,7 +1461,7 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                 </div>
                 {placementForm.ctc && <div className="bg-green-50 rounded-xl p-3 text-sm text-green-700 font-medium">Commission: ₹{((parseFloat(placementForm.ctc)*parseFloat(placementForm.commission_percent))/100).toLocaleString('en-IN')}</div>}
                 <div><label className="text-xs font-semibold text-gray-500 block mb-1">DATE OF JOINING</label><input type="date" value={placementForm.joining_date} onChange={e=>setPlacementForm({...placementForm,joining_date:e.target.value})} className={inp()} /></div>
-                <button onClick={addPlacement} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl">Record Placement</button>
+                <button onClick={addPlacement} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl">Record Placement</button>
               </div>
             )}
 
@@ -1479,13 +1479,13 @@ ${items.map((item,i)=>`<tr><td>${i+1}</td><td>${item.description}</td><td>${item
                       <input placeholder="Amount" type="number" value={item.amount} readOnly className="h-9 border rounded-lg px-2 text-xs bg-gray-50" />
                     </div>
                   ))}
-                  <button onClick={()=>setInvoiceForm({...invoiceForm,items:[...invoiceForm.items,{description:'',quantity:1,rate:'',amount:''}]})} className="text-xs text-blue-600 font-bold">+ Add Item</button>
+                  <button onClick={()=>setInvoiceForm({...invoiceForm,items:[...invoiceForm.items,{description:'',quantity:1,rate:'',amount:''}]})} className="text-xs text-[#1a237e] font-bold">+ Add Item</button>
                 </div>
                 <div className="grid grid-cols-2 gap-3">
                   <select value={invoiceForm.gst_percent} onChange={e=>setInvoiceForm({...invoiceForm,gst_percent:e.target.value})} className={inp()}><option value="0">GST 0%</option><option value="5">GST 5%</option><option value="12">GST 12%</option><option value="18">GST 18%</option></select>
-                  <div className="bg-blue-50 rounded-xl px-3 flex items-center text-sm font-bold text-blue-700">Total: ₹{(invoiceForm.items.reduce((s,i)=>s+(parseFloat(i.amount)||0),0)*(1+parseFloat(invoiceForm.gst_percent)/100)).toLocaleString('en-IN')}</div>
+                  <div className="bg-[#e8eaf6] rounded-xl px-3 flex items-center text-sm font-bold text-[#0d1757]">Total: ₹{(invoiceForm.items.reduce((s,i)=>s+(parseFloat(i.amount)||0),0)*(1+parseFloat(invoiceForm.gst_percent)/100)).toLocaleString('en-IN')}</div>
                 </div>
-                <button onClick={addInvoice} className="w-full h-11 bg-blue-600 text-white font-bold rounded-xl">Create Invoice</button>
+                <button onClick={addInvoice} className="w-full h-11 bg-[#1a237e] text-white font-bold rounded-xl">Create Invoice</button>
               </div>
             )}
 

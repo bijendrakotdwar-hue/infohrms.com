@@ -59,7 +59,7 @@ const SignupPage = () => {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
       <div className="flex flex-grow pt-20">
-        <div className="hidden lg:flex flex-col w-96 bg-blue-50 p-10 border-r">
+        <div className="hidden lg:flex flex-col w-96 bg-[#e8eaf6] p-10 border-r">
           <div className="mt-10">
             <h2 className="text-2xl font-bold mb-6">On registering, you can</h2>
             <ul className="space-y-5">
@@ -136,25 +136,25 @@ const SignupPage = () => {
                 <>
                   <input type="file" accept=".pdf,.doc,.docx" onChange={handleFile} ref={fileRef} className="hidden" />
                   <button type="button" onClick={() => fileRef.current?.click()}
-                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold transition-colors">
+                    className="flex items-center gap-2 px-6 py-3 bg-[#1a237e] hover:bg-[#0d1757] text-white rounded-xl text-sm font-bold transition-colors">
                     <Upload className="w-4 h-4" /> Upload Your CV
                   </button>
                   <p className="text-xs text-gray-400 mt-1">PDF, DOC, DOCX | Max 5MB</p>
                 </>
               ) : (
-                <div className="flex items-center gap-3 p-3 border-2 border-blue-200 bg-blue-50 rounded-xl">
-                  <FileText className="w-5 h-5 text-blue-600 shrink-0" />
+                <div className="flex items-center gap-3 p-3 border-2 border-blue-200 bg-[#e8eaf6] rounded-xl">
+                  <FileText className="w-5 h-5 text-[#1a237e] shrink-0" />
                   <span className="text-sm font-medium flex-1 truncate">{file.name}</span>
                   <button type="button" onClick={() => setFile(null)} className="text-gray-400 hover:text-red-500"><X className="w-4 h-4" /></button>
                 </div>
               )}
             </div>
             <button type="submit" disabled={loading}
-              className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-lg transition-colors">
+              className="w-full py-4 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-lg transition-colors">
               {loading ? 'Registering...' : 'Register Now'}
             </button>
-            <p className="text-center text-sm text-gray-500">Already registered? <Link to="/candidate-portal" className="text-blue-600 font-bold hover:underline">Login here</Link></p>
-            <p className="text-center text-sm text-gray-500">Are you a company? <Link to="/company-signup" className="text-blue-600 font-bold hover:underline">Register as Company</Link></p>
+            <p className="text-center text-sm text-gray-500">Already registered? <Link to="/candidate-portal" className="text-[#1a237e] font-bold hover:underline">Login here</Link></p>
+            <p className="text-center text-sm text-gray-500">Are you a company? <Link to="/company-signup" className="text-[#1a237e] font-bold hover:underline">Register as Company</Link></p>
           </form>
         </div>
       </div>

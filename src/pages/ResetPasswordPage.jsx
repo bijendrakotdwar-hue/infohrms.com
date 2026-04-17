@@ -51,7 +51,7 @@ const ResetPasswordPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Invalid Reset Link</h1>
-          <Link to="/" className="text-blue-600 hover:underline">Go to Home</Link>
+          <Link to="/" className="text-[#1a237e] hover:underline">Go to Home</Link>
         </div>
       </div>
     )
@@ -60,7 +60,7 @@ const ResetPasswordPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="w-full max-w-sm bg-white border rounded-2xl p-8 shadow-sm">
-        <Link to="/" className="text-2xl font-extrabold text-blue-600 block mb-6">infohrms</Link>
+        <Link to="/" className="text-2xl font-extrabold text-[#1a237e] block mb-6">infohrms</Link>
         {success ? (
           <div className="text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -93,7 +93,7 @@ const ResetPasswordPage = () => {
                   className="w-full h-11 border rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <button onClick={handleReset} disabled={loading}
-                className="w-full h-11 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                 {loading ? 'Resetting...' : 'Reset Password'}
               </button>
             </div>

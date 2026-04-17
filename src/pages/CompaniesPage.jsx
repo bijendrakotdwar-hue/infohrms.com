@@ -22,7 +22,7 @@ const CompaniesPage = () => {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-extrabold mb-4">Top Companies</h1>
           <p className="text-gray-500 text-lg mb-6">Leading companies hiring with AI.</p>
-          <Link to="/company-signup" className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-colors">Register Your Company</Link>
+          <Link to="/company-signup" className="inline-block px-6 py-3 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl transition-colors">Register Your Company</Link>
         </div>
       </section>
       <section className="py-16 flex-grow">
@@ -35,15 +35,15 @@ const CompaniesPage = () => {
             <div className="text-center py-20">
               <Building2 className="w-16 h-16 text-gray-300 mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">No companies yet</h3>
-              <Link to="/company-signup" className="inline-block mt-4 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl">Register First Company</Link>
+              <Link to="/company-signup" className="inline-block mt-4 px-6 py-3 bg-[#1a237e] text-white font-bold rounded-xl">Register First Company</Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {companies.map(company => (
                 <div key={company.id} className="bg-white border rounded-2xl p-6 hover:shadow-md transition-all hover:-translate-y-0.5 flex flex-col">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center border shrink-0">
-                      <Building2 className="w-7 h-7 text-blue-600" />
+                    <div className="w-14 h-14 rounded-xl bg-[#e8eaf6] flex items-center justify-center border shrink-0">
+                      <Building2 className="w-7 h-7 text-[#1a237e]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-lg line-clamp-1">{company.company_name}</h3>
@@ -53,7 +53,7 @@ const CompaniesPage = () => {
                   <p className="text-sm text-gray-500 mb-4 flex-grow">AI-powered hiring. Apply and get matched automatically!</p>
                   <div className="flex items-center justify-between pt-3 border-t">
                     <span className="text-xs text-gray-400">Technology</span>
-                    <Link to={`/jobs?q=${encodeURIComponent(company.company_name)}`} className="text-xs px-3 py-1.5 border border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg font-medium">View Jobs</Link>
+                    <Link to={`/jobs?q=${encodeURIComponent(company.company_name)}`} className="text-xs px-3 py-1.5 border border-[#1a237e] text-[#1a237e] hover:bg-[#e8eaf6] rounded-lg font-medium">View Jobs</Link>
                   </div>
                 </div>
               ))}

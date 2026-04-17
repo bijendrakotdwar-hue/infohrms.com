@@ -52,7 +52,7 @@ const HomePage = () => {
               <input value={keyword} onChange={e => setKeyword(e.target.value)}
                 placeholder="Job title, skills, or company..."
                 className="flex-1 h-14 px-5 rounded-xl text-gray-900 bg-white text-base focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <button type="submit" className="h-14 px-8 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-base transition-colors flex items-center justify-center gap-2">
+              <button type="submit" className="h-14 px-8 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl text-base transition-colors flex items-center justify-center gap-2">
                 <Search className="w-5 h-5" /> Search
               </button>
             </form>
@@ -69,7 +69,7 @@ const HomePage = () => {
         <div className="max-w-3xl mx-auto px-4 grid grid-cols-3 gap-6 text-center">
           {[['Active Jobs', stats.jobs],['Registered Candidates', stats.candidates],['Companies Hiring', stats.companies]].map(([label, value]) => (
             <div key={label}>
-              <p className="text-3xl md:text-4xl font-extrabold text-blue-600">{value || '0'}</p>
+              <p className="text-3xl md:text-4xl font-extrabold text-[#1a237e]">{value || '0'}</p>
               <p className="text-sm text-gray-500 mt-1">{label}</p>
             </div>
           ))}
@@ -81,15 +81,15 @@ const HomePage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl md:text-3xl font-bold">Latest Jobs</h2>
-              <Link to="/jobs" className="flex items-center gap-1 text-blue-600 font-medium text-sm hover:underline">View All <ArrowRight className="w-4 h-4" /></Link>
+              <Link to="/jobs" className="flex items-center gap-1 text-[#1a237e] font-medium text-sm hover:underline">View All <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {recentJobs.map((job, i) => (
                 <motion.div key={job.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                   className="bg-white border rounded-2xl p-5 hover:shadow-md transition-all hover:-translate-y-0.5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
-                      <Briefcase className="w-5 h-5 text-blue-600" />
+                    <div className="w-10 h-10 rounded-xl bg-[#e8eaf6] flex items-center justify-center shrink-0">
+                      <Briefcase className="w-5 h-5 text-[#1a237e]" />
                     </div>
                     <div>
                       <h3 className="font-bold text-sm line-clamp-1">{job.title}</h3>
@@ -98,11 +98,11 @@ const HomePage = () => {
                   </div>
                   <div className="flex flex-wrap gap-1.5 mb-3">
                     {Array.isArray(job.required_skills) && job.required_skills.slice(0, 3).map((s, i) => (
-                      <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>
+                      <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>
                     ))}
                   </div>
                   <p className="text-xs text-gray-400 mb-3">{job.min_experience ? `${job.min_experience}+ years` : 'Any experience'}</p>
-                  <Link to="/signup" className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-xl transition-colors">Apply Now</Link>
+                  <Link to="/signup" className="block w-full text-center bg-[#1a237e] hover:bg-[#0d1757] text-white text-xs font-bold py-2 rounded-xl transition-colors">Apply Now</Link>
                 </motion.div>
               ))}
             </div>
@@ -122,8 +122,8 @@ const HomePage = () => {
             ].map(({ icon: Icon, title, desc }, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="flex flex-col items-center">
-                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-4">
-                  <Icon className="w-7 h-7 text-blue-600" />
+                <div className="w-14 h-14 rounded-2xl bg-[#e8eaf6] flex items-center justify-center mb-4">
+                  <Icon className="w-7 h-7 text-[#1a237e]" />
                 </div>
                 <h3 className="font-bold mb-2">{title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{desc}</p>
@@ -131,13 +131,13 @@ const HomePage = () => {
             ))}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/signup" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-lg transition-colors">Upload Your CV — Free</Link>
-            <Link to="/company-signup" className="px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold rounded-xl text-lg transition-colors">Hire with AI</Link>
+            <Link to="/signup" className="px-8 py-4 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl text-lg transition-colors">Upload Your CV — Free</Link>
+            <Link to="/company-signup" className="px-8 py-4 border-2 border-[#1a237e] text-[#1a237e] hover:bg-[#e8eaf6] font-bold rounded-xl text-lg transition-colors">Hire with AI</Link>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-blue-50 border-t">
+      <section className="py-16 bg-[#e8eaf6] border-t">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">Are you hiring?</h2>
           <p className="text-gray-500 mb-8">Post a job and let AI automatically shortlist the best candidates.</p>
@@ -149,7 +149,7 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-          <Link to="/company-signup" className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-lg transition-colors">Register Your Company — Free</Link>
+          <Link to="/company-signup" className="inline-block px-8 py-4 bg-[#1a237e] hover:bg-[#0d1757] text-white font-bold rounded-xl text-lg transition-colors">Register Your Company — Free</Link>
         </div>
       </section>
       <Footer />

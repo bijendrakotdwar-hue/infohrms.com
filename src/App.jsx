@@ -54,9 +54,9 @@ function App() {
         <Route path="/consultant-portal" element={<ConsultantPortalPage />} />
         <Route path="*" element={
           <div className="min-h-screen flex items-center justify-center text-center px-4">
-            <div><h1 className="text-6xl font-bold text-blue-600 mb-4">404</h1>
+            <div><h1 className="text-6xl font-bold text-[#1a237e] mb-4">404</h1>
             <p className="text-xl text-gray-500 mb-8">Page not found</p>
-            <a href="/" className="text-blue-600 hover:underline">Back to home</a></div>
+            <a href="/" className="text-[#1a237e] hover:underline">Back to home</a></div>
           </div>
         } />
       </Routes>

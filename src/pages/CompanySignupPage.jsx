@@ -44,10 +44,10 @@ const CompanySignupPage = () => {
     <div className="min-h-screen bg-white flex flex-col">
       <Header />
       <div className="flex flex-grow pt-20">
-        <div className="hidden lg:flex flex-col w-96 bg-blue-50 p-10 border-r">
+        <div className="hidden lg:flex flex-col w-96 bg-[#e8eaf6] p-10 border-r">
           <div className="mt-10">
-            <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center mb-6">
-              <Building2 className="w-7 h-7 text-blue-600" />
+            <div className="w-14 h-14 rounded-2xl bg-[#e8eaf6] flex items-center justify-center mb-6">
+              <Building2 className="w-7 h-7 text-[#1a237e]" />
             </div>
             <h2 className="text-2xl font-bold mb-6">Hire smarter with AI</h2>
             <ul className="space-y-5">
@@ -125,10 +125,10 @@ const CompanySignupPage = () => {
               </div>
             </div>
             <button type="submit" disabled={loading}
-              className="w-full py-4 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-lg transition-colors">
+              className="w-full py-4 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-lg transition-colors">
               {loading ? 'Registering...' : 'Register Company'}
             </button>
-            <p className="text-center text-sm text-gray-500">Already registered? <Link to="/company-portal" className="text-blue-600 font-bold hover:underline">Login to Portal</Link></p>
+            <p className="text-center text-sm text-gray-500">Already registered? <Link to="/company-portal" className="text-[#1a237e] font-bold hover:underline">Login to Portal</Link></p>
           </form>
         </div>
       </div>

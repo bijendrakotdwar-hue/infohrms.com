@@ -9,7 +9,7 @@ const h = { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, '
 const STAGES = ['Applied', 'Shortlisted', 'Interview', 'Selected', 'Hired', 'Rejected']
 const STAGE_COLORS = {
   'Applied': 'bg-gray-100 text-gray-700',
-  'Shortlisted': 'bg-blue-100 text-blue-700',
+  'Shortlisted': 'bg-[#e8eaf6] text-[#0d1757]',
   'Interview': 'bg-yellow-100 text-yellow-700',
   'Selected': 'bg-green-100 text-green-700',
   'Hired': 'bg-emerald-100 text-emerald-700',
@@ -422,12 +422,12 @@ const CompanyPortalPage = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
         <header className="bg-white shadow-sm py-4 px-6 flex items-center justify-between">
-          <Link to="/" className="text-xl font-extrabold text-blue-600">infohrms</Link>
-          <Link to="/company-signup" className="text-sm text-blue-600 font-bold hover:underline">Register Company</Link>
+          <Link to="/" className="text-xl font-extrabold text-[#1a237e]">infohrms</Link>
+          <Link to="/company-signup" className="text-sm text-[#1a237e] font-bold hover:underline">Register Company</Link>
         </header>
         <div className="flex-grow flex items-center justify-center p-6">
           <div className="w-full max-w-sm bg-white rounded-2xl p-8 shadow-xl">
-            <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mb-5">
+            <div className="w-14 h-14 rounded-2xl bg-[#1a237e] flex items-center justify-center mb-5">
               <Building2 className="w-7 h-7 text-white" />
             </div>
             {!showForgot ? (
@@ -452,13 +452,13 @@ const CompanyPortalPage = () => {
                       </button>
                     </div>
                   </div>
-                  <button onClick={() => setShowForgot(true)} className="text-xs text-blue-600 hover:underline w-full text-right">Forgot password?</button>
+                  <button onClick={() => setShowForgot(true)} className="text-xs text-[#1a237e] hover:underline w-full text-right">Forgot password?</button>
                   <button onClick={handleLogin} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                     {loading ? 'Logging in...' : 'Login →'}
                   </button>
                 </div>
-                <p className="text-center text-xs text-gray-500 mt-5">Not registered? <Link to="/company-signup" className="text-blue-600 font-bold hover:underline">Register here</Link></p>
+                <p className="text-center text-xs text-gray-500 mt-5">Not registered? <Link to="/company-signup" className="text-[#1a237e] font-bold hover:underline">Register here</Link></p>
               </>
             ) : (
               <>
@@ -469,10 +469,10 @@ const CompanyPortalPage = () => {
                   <input type="email" value={forgotEmail} onChange={e => setForgotEmail(e.target.value)} placeholder="Registered email"
                     className="w-full h-11 border rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   <button onClick={handleForgot} disabled={loading}
-                    className="w-full h-11 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                    className="w-full h-11 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                     {loading ? 'Sending...' : 'Send Reset Link'}
                   </button>
-                  <button onClick={() => { setShowForgot(false); setError('') }} className="w-full text-xs text-gray-500 hover:text-blue-600 text-center">← Back to Login</button>
+                  <button onClick={() => { setShowForgot(false); setError('') }} className="w-full text-xs text-gray-500 hover:text-[#1a237e] text-center">← Back to Login</button>
                 </div>
               </>
             )}
@@ -557,7 +557,7 @@ const CompanyPortalPage = () => {
                 <button onClick={() => setEditingJob(null)}
                   className="flex-1 py-2 rounded-xl border text-sm font-semibold text-gray-600 hover:bg-gray-50">Cancel</button>
                 <button onClick={saveJob} disabled={loading}
-                  className="flex-1 py-2 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 disabled:opacity-60">
+                  className="flex-1 py-2 rounded-xl bg-[#1a237e] text-white text-sm font-semibold hover:bg-[#0d1757] disabled:opacity-60">
                   {loading ? 'Saving...' : '💾 Save Changes'}
                 </button>
               </div>
@@ -567,10 +567,10 @@ const CompanyPortalPage = () => {
       )}
       {/* Header */}
       <header className="bg-white border-b py-3 px-6 flex items-center justify-between sticky top-0 z-20 shadow-sm">
-        <Link to="/" className="text-lg font-extrabold text-blue-600">infohrms</Link>
+        <Link to="/" className="text-lg font-extrabold text-[#1a237e]">infohrms</Link>
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+            <div className="w-8 h-8 rounded-full bg-[#1a237e] flex items-center justify-center text-white text-xs font-bold">
               {company?.company_name?.charAt(0)}
             </div>
             <span className="text-sm font-bold">{company?.company_name}</span>
@@ -594,7 +594,7 @@ const CompanyPortalPage = () => {
             ['offer-letter', 'Offer Letter', FileText],
           ].map(([id, label, Icon]) => (
             <button key={id} onClick={() => setTab(id)}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-left ${tab===id?'bg-blue-600 text-white shadow-md':'text-gray-600 hover:bg-gray-100'}`}>
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all text-left ${tab===id?'bg-[#1a237e] text-white shadow-md':'text-gray-600 hover:bg-gray-100'}`}>
               <Icon className="w-4 h-4 shrink-0" />{label}
             </button>
           ))}
@@ -605,7 +605,7 @@ const CompanyPortalPage = () => {
           <div className="flex gap-2 p-3 bg-white border-b overflow-x-auto">
             {[['dashboard','Dashboard'],['post-job','Post Job'],['jobs','Jobs'],['candidates','Candidates'],['interviews','Interviews'],['offer-letter','Offer'],['kanban','Kanban']].map(([id,label]) => (
               <button key={id} onClick={() => setTab(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-blue-600 text-white':'bg-gray-100 text-gray-500'}`}>{label}</button>
+                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap ${tab===id?'bg-[#1a237e] text-white':'bg-gray-100 text-gray-500'}`}>{label}</button>
             ))}
           </div>
         </div>
@@ -620,7 +620,7 @@ const CompanyPortalPage = () => {
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
-                  ['Active Jobs', activeJobs.length, 'bg-blue-500', Briefcase, 'jobs'],
+                  ['Active Jobs', activeJobs.length, 'bg-[#1a237e]', Briefcase, 'jobs'],
                   ['Total Matches', matches.length, 'bg-purple-500', Users, 'candidates'],
                   ['Shortlisted', shortlisted.length, 'bg-green-500', CheckCircle, 'candidates'],
                   ['Interviews', upcomingInterviews.length, 'bg-orange-500', Calendar, 'interviews'],
@@ -640,11 +640,11 @@ const CompanyPortalPage = () => {
 
               {/* Quick actions */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <button onClick={() => setTab('post-job')} className="flex items-center gap-3 p-4 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 transition-colors">
+                <button onClick={() => setTab('post-job')} className="flex items-center gap-3 p-4 bg-[#1a237e] text-white rounded-2xl hover:bg-[#0d1757] transition-colors">
                   <Plus className="w-5 h-5" /><span className="font-medium">Post New Job</span>
                 </button>
-                <button onClick={() => setTab('candidates')} className="flex items-center gap-3 p-4 bg-white border-2 border-blue-200 rounded-2xl hover:bg-blue-50 transition-colors">
-                  <Users className="w-5 h-5 text-blue-600" /><span className="font-medium text-blue-600">View Candidates</span>
+                <button onClick={() => setTab('candidates')} className="flex items-center gap-3 p-4 bg-white border-2 border-blue-200 rounded-2xl hover:bg-[#e8eaf6] transition-colors">
+                  <Users className="w-5 h-5 text-[#1a237e]" /><span className="font-medium text-[#1a237e]">View Candidates</span>
                 </button>
                 <button onClick={() => setTab('interviews')} className="flex items-center gap-3 p-4 bg-white border-2 border-orange-200 rounded-2xl hover:bg-orange-50 transition-colors">
                   <Calendar className="w-5 h-5 text-orange-500" /><span className="font-medium text-orange-500">Schedule Interview</span>
@@ -763,7 +763,7 @@ const CompanyPortalPage = () => {
                     {selectedSkills.length > 0 && (
                       <div className="flex flex-wrap gap-1.5 mb-2">
                         {selectedSkills.map(skill => (
-                          <span key={skill} className="flex items-center gap-1 bg-blue-100 text-blue-700 px-2.5 py-1 rounded-full text-xs font-medium">
+                          <span key={skill} className="flex items-center gap-1 bg-[#e8eaf6] text-[#0d1757] px-2.5 py-1 rounded-full text-xs font-medium">
                             {skill}
                             <button onClick={() => removeSkill(skill)} className="text-blue-400 hover:text-red-500 font-bold text-sm leading-none">×</button>
                           </span>
@@ -782,7 +782,7 @@ const CompanyPortalPage = () => {
                         <div className="absolute z-10 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-1 max-h-48 overflow-y-auto">
                           {skillSuggestions.map(skill => (
                             <button key={skill} onClick={() => addSkill(skill)}
-                              className="w-full text-left px-4 py-2.5 text-sm hover:bg-blue-50 hover:text-blue-700 transition-colors border-b last:border-0">
+                              className="w-full text-left px-4 py-2.5 text-sm hover:bg-[#e8eaf6] hover:text-[#0d1757] transition-colors border-b last:border-0">
                               {skill}
                             </button>
                           ))}
@@ -847,9 +847,9 @@ const CompanyPortalPage = () => {
                       className="w-full h-11 border rounded-xl px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
                   </div>
                 </div>
-                <div className="bg-blue-50 rounded-xl p-3 text-xs text-blue-700">🤖 AI will instantly analyze all candidates and rank them by fit!</div>
+                <div className="bg-[#e8eaf6] rounded-xl p-3 text-xs text-[#0d1757]">🤖 AI will instantly analyze all candidates and rank them by fit!</div>
                 <button onClick={postJob} disabled={loading}
-                  className="w-full h-12 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white font-bold rounded-xl text-sm">
+                  className="w-full h-12 bg-[#1a237e] hover:bg-[#0d1757] disabled:opacity-60 text-white font-bold rounded-xl text-sm">
                   {loading ? '⏳ AI Matching in progress...' : '🚀 Post Job & Start AI Matching'}
                 </button>
               </div>
@@ -881,20 +881,20 @@ const CompanyPortalPage = () => {
                             <div>
                               <p className="font-semibold text-sm">{m.candidates?.name || 'Unknown'}</p>
                               <p className="text-xs text-gray-500">{m.candidates?.job_title || m.candidates?.current_title || 'No title'} • {m.candidates?.experience_years || 0} yrs exp</p>
-                              {m.candidates?.email && <p className="text-xs text-blue-500">{m.candidates.email}</p>}
+                              {m.candidates?.email && <p className="text-xs text-[#1a237e]">{m.candidates.email}</p>}
                             </div>
                           </div>
                           <span className="text-green-600 font-bold text-sm">{m.ai_score}%</span>
                         </div>
                         <div className="flex flex-wrap gap-1.5 mt-2">
                           {(m.candidates?.parsed_skills || []).slice(0,4).map((s,i) => (
-                            <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">{s}</span>
+                            <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2 py-0.5 rounded-full">{s}</span>
                           ))}
                         </div>
                         <div className="flex gap-2 mt-3">
-                          {m.candidates?.email && <a href={`mailto:${m.candidates.email}`} className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-blue-700 flex items-center gap-1"><Mail className="w-3 h-3" /> Email</a>}
+                          {m.candidates?.email && <a href={`mailto:${m.candidates.email}`} className="text-xs bg-[#1a237e] text-white px-3 py-1.5 rounded-lg font-medium hover:bg-[#0d1757] flex items-center gap-1"><Mail className="w-3 h-3" /> Email</a>}
                           {m.candidates?.phone && <a href={`tel:${m.candidates.phone}`} className="text-xs bg-gray-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-gray-700 flex items-center gap-1"><Phone className="w-3 h-3" /> Call</a>}
-                          {m.candidates?.resume_url && <a href={m.candidates.resume_url} target="_blank" rel="noreferrer" className="text-xs border border-blue-500 text-blue-600 px-3 py-1.5 rounded-lg font-medium hover:bg-blue-50 flex items-center gap-1"><Download className="w-3 h-3" /> Resume</a>}
+                          {m.candidates?.resume_url && <a href={m.candidates.resume_url} target="_blank" rel="noreferrer" className="text-xs border border-blue-500 text-[#1a237e] px-3 py-1.5 rounded-lg font-medium hover:bg-[#e8eaf6] flex items-center gap-1"><Download className="w-3 h-3" /> Resume</a>}
                         </div>
                       </div>
                     ))}
@@ -912,7 +912,7 @@ const CompanyPortalPage = () => {
                 <div className="bg-white rounded-2xl border p-12 text-center">
                   <Briefcase className="w-12 h-12 text-gray-300 mx-auto mb-3" />
                   <p className="text-gray-500">No jobs posted yet.</p>
-                  <button onClick={() => setTab('post-job')} className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-xl text-sm font-bold">Post First Job</button>
+                  <button onClick={() => setTab('post-job')} className="mt-4 px-6 py-2 bg-[#1a237e] text-white rounded-xl text-sm font-bold">Post First Job</button>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -929,14 +929,14 @@ const CompanyPortalPage = () => {
                             {j.status==='active' ? '✅ Active' : '⏸ Inactive'}
                           </button>
                           <button onClick={() => setEditingJob({...j, required_skills: Array.isArray(j.required_skills) ? j.required_skills.join(', ') : j.required_skills})}
-                            className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full hover:bg-blue-200">✏️ Edit</button>
+                            className="text-xs bg-[#e8eaf6] text-[#0d1757] px-3 py-1 rounded-full hover:bg-blue-200">✏️ Edit</button>
                           <button onClick={() => deleteJob(j.id)}
                             className="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full hover:bg-red-200">🗑️ Delete</button>
                         </div>
                       </div>
                       <div className="flex flex-wrap gap-1.5">
                         {Array.isArray(j.required_skills) && j.required_skills.map((s,i) => (
-                          <span key={i} className="text-xs bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full">{s}</span>
+                          <span key={i} className="text-xs bg-[#e8eaf6] text-[#1a237e] px-2.5 py-1 rounded-full">{s}</span>
                         ))}
                       </div>
                       <div className="flex items-center gap-4 mt-3 text-xs text-gray-400">
@@ -1017,11 +1017,11 @@ const CompanyPortalPage = () => {
                           <div>
                             <h3 className="font-bold">{match.candidates?.name}</h3>
                             <p className="text-xs text-gray-500">{match.candidates?.job_title} • {match.candidates?.experience_years}yr exp</p>
-                            <p className="text-xs text-blue-500 mt-0.5">For: {match.jobs?.title}</p>
+                            <p className="text-xs text-[#1a237e] mt-0.5">For: {match.jobs?.title}</p>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-blue-600">{match.ai_score}%</div>
+                          <div className="text-2xl font-bold text-[#1a237e]">{match.ai_score}%</div>
                           <select value={match.status} onChange={e => updateMatchStatus(match.id, e.target.value)}
                             className="text-xs border rounded-lg px-2 py-1 mt-1 focus:outline-none focus:ring-1 focus:ring-blue-500">
                             {STAGES.map(s => <option key={s} value={s}>{s}</option>)}
@@ -1038,13 +1038,13 @@ const CompanyPortalPage = () => {
                           className="text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-green-700 flex items-center gap-1">
                           <FileText className="w-3 h-3" /> Offer Letter
                         </button>
-                        <a href={`mailto:${match.candidates?.email}`} className="text-xs bg-blue-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-blue-700 flex items-center gap-1">
+                        <a href={`mailto:${match.candidates?.email}`} className="text-xs bg-[#1a237e] text-white px-3 py-1.5 rounded-lg font-medium hover:bg-[#0d1757] flex items-center gap-1">
                           <Mail className="w-3 h-3" /> Email
                         </a>
                         {match.candidates?.phone && <a href={`tel:${match.candidates?.phone}`} className="text-xs bg-gray-600 text-white px-3 py-1.5 rounded-lg font-medium hover:bg-gray-700 flex items-center gap-1">
                           <Phone className="w-3 h-3" /> Call
                         </a>}
-                        {match.candidates?.resume_url && <a href={match.candidates.resume_url} target="_blank" rel="noreferrer" className="text-xs border border-blue-500 text-blue-600 px-3 py-1.5 rounded-lg font-medium hover:bg-blue-50 flex items-center gap-1">
+                        {match.candidates?.resume_url && <a href={match.candidates.resume_url} target="_blank" rel="noreferrer" className="text-xs border border-blue-500 text-[#1a237e] px-3 py-1.5 rounded-lg font-medium hover:bg-[#e8eaf6] flex items-center gap-1">
                           <Download className="w-3 h-3" /> Resume
                         </a>}
                       </div>
@@ -1096,14 +1096,14 @@ const CompanyPortalPage = () => {
                                 </div>
                               </div>
                               <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs text-blue-600 font-bold">{match.ai_score}% match</span>
+                                <span className="text-xs text-[#1a237e] font-bold">{match.ai_score}% match</span>
                                 <span className="text-xs text-gray-400">{match.candidates?.experience_years}yr exp</span>
                               </div>
                               <p className="text-xs text-gray-400 truncate mb-2">{match.jobs?.title}</p>
                               <div className="flex gap-1 flex-wrap">
                                 {STAGES.filter(s=>s!==stage).slice(0,2).map(s=>(
                                   <button key={s} onClick={()=>updateMatchStatus(match.id,s)}
-                                    className="text-xs bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-700 px-2 py-0.5 rounded-lg transition-colors">
+                                    className="text-xs bg-gray-100 hover:bg-[#e8eaf6] text-gray-600 hover:text-[#0d1757] px-2 py-0.5 rounded-lg transition-colors">
                                     → {s}
                                   </button>
                                 ))}
@@ -1113,7 +1113,7 @@ const CompanyPortalPage = () => {
                                   className="flex-1 text-xs bg-orange-50 text-orange-600 py-1 rounded-lg hover:bg-orange-100">📅</button>
                                 {match.candidates?.resume_url && (
                                   <a href={match.candidates.resume_url} target="_blank" rel="noreferrer"
-                                    className="flex-1 text-xs bg-blue-50 text-blue-600 py-1 rounded-lg hover:bg-blue-100 text-center">📥</a>
+                                    className="flex-1 text-xs bg-[#e8eaf6] text-[#1a237e] py-1 rounded-lg hover:bg-[#e8eaf6] text-center">📥</a>
                                 )}
                                 <a href={`mailto:${match.candidates?.email}`}
                                   className="flex-1 text-xs bg-gray-50 text-gray-600 py-1 rounded-lg hover:bg-gray-100 text-center">✉️</a>
@@ -1171,7 +1171,7 @@ const CompanyPortalPage = () => {
                       </div>
                       {iv.meeting_link && (
                         <a href={iv.meeting_link} target="_blank" rel="noreferrer"
-                          className="mt-3 flex items-center gap-2 text-xs text-blue-600 hover:underline">
+                          className="mt-3 flex items-center gap-2 text-xs text-[#1a237e] hover:underline">
                           🔗 {iv.meeting_link}
                         </a>
                       )}
@@ -1248,7 +1248,7 @@ const CompanyPortalPage = () => {
                   <h2 className="text-xl font-bold">{selectedProfile.candidates?.name}</h2>
                   <p className="text-gray-500 text-sm">{selectedProfile.candidates?.job_title || selectedProfile.candidates?.current_title || 'Professional'}</p>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{selectedProfile.ai_score}% match</span>
+                    <span className="text-xs bg-[#e8eaf6] text-[#0d1757] px-2 py-0.5 rounded-full">{selectedProfile.ai_score}% match</span>
                     <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{selectedProfile.candidates?.experience_years || 0} yrs exp</span>
                   </div>
                 </div>
@@ -1260,13 +1260,13 @@ const CompanyPortalPage = () => {
                 {selectedProfile.candidates?.email ? (
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-gray-400">✉️</span>
-                    <a href={`mailto:${selectedProfile.candidates.email}`} className="text-blue-600 hover:underline">{selectedProfile.candidates.email}</a>
+                    <a href={`mailto:${selectedProfile.candidates.email}`} className="text-[#1a237e] hover:underline">{selectedProfile.candidates.email}</a>
                   </div>
                 ) : <p className="text-sm text-gray-400">Email not available</p>}
                 {selectedProfile.candidates?.phone ? (
                   <div className="flex items-center gap-2 text-sm">
                     <span className="text-gray-400">📱</span>
-                    <a href={`tel:${selectedProfile.candidates.phone}`} className="text-blue-600 hover:underline">{selectedProfile.candidates.phone}</a>
+                    <a href={`tel:${selectedProfile.candidates.phone}`} className="text-[#1a237e] hover:underline">{selectedProfile.candidates.phone}</a>
                   </div>
                 ) : <p className="text-sm text-gray-400">Phone not available</p>}
                 {selectedProfile.candidates?.location && (
@@ -1278,10 +1278,10 @@ const CompanyPortalPage = () => {
               </div>
 
               {/* Job Applied For */}
-              <div className="bg-blue-50 rounded-xl p-4 mb-4">
-                <h4 className="font-semibold text-sm text-blue-700 mb-1">💼 Applied For</h4>
+              <div className="bg-[#e8eaf6] rounded-xl p-4 mb-4">
+                <h4 className="font-semibold text-sm text-[#0d1757] mb-1">💼 Applied For</h4>
                 <p className="text-sm font-medium">{selectedProfile.jobs?.title}</p>
-                <p className="text-xs text-blue-500 mt-1">{selectedProfile.match_reason}</p>
+                <p className="text-xs text-[#1a237e] mt-1">{selectedProfile.match_reason}</p>
               </div>
 
               {/* Skills */}
@@ -1325,7 +1325,7 @@ const CompanyPortalPage = () => {
               <div className="flex gap-2 flex-wrap pt-2 border-t">
                 {selectedProfile.candidates?.resume_url && (
                   <a href={selectedProfile.candidates.resume_url} target="_blank" rel="noreferrer"
-                    className="flex-1 text-center py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold hover:bg-blue-700 flex items-center justify-center gap-1">
+                    className="flex-1 text-center py-2 bg-[#1a237e] text-white rounded-xl text-sm font-semibold hover:bg-[#0d1757] flex items-center justify-center gap-1">
                     <Download className="w-4 h-4" /> Download Resume
                   </a>
                 )}
